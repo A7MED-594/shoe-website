@@ -163,3 +163,17 @@
         font-size: 0.75rem;
     }
 }
+@media (max-width: 991px) {
+    .hero {
+    text-align: center;
+    }
+    .bg-text {
+    font-size: 100px;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-30deg);
+    }
+    .hero img {
+    width: 300px;
+    }
+}

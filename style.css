@@ -364,3 +364,112 @@ body {
     border-left: 6px solid #ff6b6b;
 }
 
+.hero {
+    padding: 60px 40px;
+    position: relative;
+}
+
+.hero h3 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero img {
+    width: 450px;
+    height: 530px;
+    position: relative;
+    z-index: 2;
+}
+
+.bg-text {
+    position: absolute;
+    font-size: 260px;
+    font-weight: bold;
+    color: var(--gold);
+    opacity: 0.8;
+    transform: rotate(-30deg);
+    top: 130px;
+    left: -35px;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 30px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.btn-custom {
+    background: #c2a267;
+    color: #fff;
+    padding: 12px 26px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-custom:hover {
+    background: #a88648;
+    color: #fff;
+}
+.shouses .row
+{
+    display: flex;
+    justify-content: center;
+}
+.shouses h3
+{
+    color: var(--black);
+    font-size: 40px;
+}
+.card
+{
+    border: none;
+    text-align: right;
+}
+
+.card .card-img-top
+{
+    width: 471.76px;
+    height: 310.67px;
+    transform: rotate(-15deg);
+    flex-shrink: 0;
+    transition: .4s;
+}
+
+.fa-star
+{
+    color: var(--gold);
+}
+.rating span .fa-star
+{
+    color:#555;
+}
+
+.card:hover .card-img-top
+{
+    transform: rotate(-10deg);
+    transform: scale(1.2);
+
+}
+
+.p1 , .p2
+{
+    margin: 10px;
+    font-weight: 600;
+}
+.p1
+{
+    color: red;
+}
