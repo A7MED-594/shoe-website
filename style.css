@@ -1248,6 +1248,7 @@ body {
 }
 
 /* Categories section */
+
 .categories {
     display: flex;
     flex-direction: column;
@@ -1377,6 +1378,24 @@ body {
 }
 
 /* Buttons */
+.product-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+
+  opacity: 0;                 /* Hide initially */
+  max-height: 0;              /* Collapse height */
+  overflow: hidden;           /* Prevent content from showing */
+  transition: all 0.3s ease;  /* Smooth transition */
+}
+
+.product-card:hover .product-actions {
+  opacity: 1;
+  max-height: 100px; /* Or any value large enough for the buttons */
+}
+
+
+
 .product-actions {
     display: flex;
     gap: 12px;
@@ -1573,80 +1592,6 @@ body {
   gap: 40px;
 }
 
-/* text left */
-.left {
-  flex: 1;
-}
-
-.left h1 {
-  font-size: 50px;
-  margin-bottom: 15px;
-  font-weight: 700;
-}
-
-.left .sub-text {
-  font-size: 22px;
-  color: #B9985D;
-  margin: 0;
-}
-
-/* contact */
-.right {
-  flex: 1;
-  text-align: right;
-}
-
-.brand {
-  font-size: 28px;
-  color: #B9985D;
-  margin-bottom: 20px;
-}
-
-.links {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 25px;
-}
-
-.links li {
-  margin: 8px 0;
-}
-
-.links a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 18px;
-  transition: color 0.3s;
-}
-
-.links a:hover {
-  color: #B9985D;
-}
-
-/* icons */
-.social-icons {
-  display: flex;
-  justify-content: flex-end;
-  gap: 15px;
-}
-
-.social-icons a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 45px;
-  height: 45px;
-  border: 1px solid #B9985D;
-  border-radius: 50%;
-  color: #B9985D;
-  font-size: 18px;
-  transition: all 0.3s;
-}
-
-.social-icons a:hover {
-  background: #B9985D;
-  color: #000;
-}
 
 /* Product Carousel Styles */
 .product-carousel-section {
@@ -2723,12 +2668,13 @@ gap: 85px;
 }
 
 .product-box {
-  width: 726px;
-height: 849px;
-flex-shrink: 0;
-border-radius: 12px;
-background: #F6F0E5;
+  width: 100%;
+  height: auto;
+  background: #F6F0E5;
+  border-radius: 12px;
+  padding: 20px;
 }
+
 
 .product-box img {
   width: 621px;
@@ -2772,3 +2718,45 @@ flex-shrink: 0;
   border-bottom: 2px solid #c6a64c;
   box-shadow: none;
 }
+
+/* list menue */
+.menu-button {
+    background: white;
+    border: 1px solid rgba(1, 15, 28, 0.1);
+    border-radius: 7px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    padding: 5px;
+  }
+
+  /* صندوق القائمة المنبثقة */
+  .dropdown {
+    position: absolute;
+    top: 50px; /* تحت الزر */
+    left: 10px;
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    border-radius: 6px;
+    display: none; /* مخفي افتراضياً */
+    min-width: 150px;
+    z-index: 100;
+  }
+
+  /* عناصر القائمة */
+  .dropdown-item {
+    padding: 10px 15px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+  }
+  .dropdown-item:last-child {
+    border-bottom: none;
+  }
+
+  /* لون العنصر لما تحوم فوقه */
+  .dropdown-item:hover {
+    background-color: #f0f0f0;
+  }
+
+  

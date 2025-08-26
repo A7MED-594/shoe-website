@@ -53,3 +53,52 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 });
+
+
+
+
+const menuBtn = document.getElementById('menuBtn');
+  const dropdown = document.getElementById('dropdownMenu');
+
+  menuBtn.addEventListener('click', () => {
+    if (dropdown.style.display === 'block') {
+      dropdown.style.display = 'none';
+      dropdown.setAttribute('aria-hidden', 'true');
+    } else {
+      dropdown.style.display = 'block';
+      dropdown.setAttribute('aria-hidden', 'false');
+    }
+  });
+
+  // إخفاء القائمة لو ضغطت في أي مكان خارجها
+  document.addEventListener('click', (event) => {
+    if (!menuBtn.contains(event.target) && !dropdown.contains(event.target)) {
+      dropdown.style.display = 'none';
+      dropdown.setAttribute('aria-hidden', 'true');
+    }
+  });
+
+
+
+  // Listen to all Add to Cart buttons
+document.querySelectorAll('.btn-cart').forEach(button => {
+  button.addEventListener('click', function () {
+    const name = this.getAttribute('data-name');
+    const price = this.getAttribute('data-price');
+    const img = this.getAttribute('data-img');
+
+    const product = { name, price, img };
+
+    // Get existing cart or create new
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // Add product to cart
+    cart.push(product);
+
+    // Save back to localStorage
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    // Redirect to cart page
+    window.location.href = 'cart.html';
+  });
+});
