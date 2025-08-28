@@ -102,3 +102,4 @@ document.querySelectorAll('.btn-cart').forEach(button => {
     window.location.href = 'cart.html';
   });
 });
+
