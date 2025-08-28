@@ -24,7 +24,7 @@ body {
 
 .navbar .container {
     max-width: none !important;
-    padding: 0 150px;
+    padding: 0 10px;
     width: 100%;
 }
 
@@ -632,16 +632,6 @@ body {
     font-weight: 700;
 }
 
-.hero-description {
-    font-size: 18px;
-    color: var(--black);
-    margin-bottom: 35px;
-    line-height: 1.5;
-    max-width: 350px;
-    font-weight: 400;
-    margin-right: 40px;
-}
-
 .shop-now-btn {
     background-color: var(--gold);
     color: var(--white);
@@ -748,7 +738,18 @@ body {
 
 .navbar .container {
     max-width: none !important;
-    padding: 0 150px;
+    padding: 0 50px;
+    width: 100%;
+}
+
+/* Navigation Menu Container */
+.nav-menu {
+    display: flex;
+    gap: 48px;
+    margin: 0;
+    padding: 0 50px;
+    list-style: none;
+    justify-content: space-between;
     width: 100%;
 }
 
@@ -888,9 +889,9 @@ body {
 /* Navigation Menu Styles */
 .nav-menu {
     display: flex;
-    gap: 40px;
+    gap: 85px;
     margin: 0;
-    padding: 0;
+    padding: 0 50px;
     list-style: none;
     justify-content: center;
     width: 100%;
@@ -995,13 +996,12 @@ body {
 }
 
 .hero-description {
+    color: #000;
+    font-family: "Playfair Display";
     font-size: 18px;
-    color: var(--black);
-    margin-bottom: 35px;
-    line-height: 1.5;
-    max-width: 350px;
+    font-style: normal;
     font-weight: 400;
-    margin-right: 40px;
+    line-height: 30px; /* 166.667% */
 }
 
 .shop-now-btn {
@@ -2279,20 +2279,27 @@ body {
 }
 
 .footer-title {
-    font-size: 3.5rem;
+    color: #FFF;
+    font-family: "Playfair Display";
+    font-size: 120px;
+    font-style: normal;
     font-weight: 700;
-    color: var(--white);
-    line-height: 1.2;
-    margin-bottom: 30px;
-    font-family: 'Playfair Display', serif;
+    line-height: 150px; /* 125% */
 }
 
 .shopping-now-link {
-    color: var(--gold);
-    font-size: 1.2rem;
-    font-weight: 600;
-    text-decoration: underline;
-    font-family: 'Playfair Display', serif;
+    color: #B9985D;
+    font-family: "Playfair Display";
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150px; /* 250% */
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
     transition: all 0.3s ease;
 }
 
@@ -2310,13 +2317,17 @@ body {
 }
 
 .footer-brand {
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--white);
-    margin-bottom: 30px;
-    font-family: 'Playfair Display', serif;
+    color: #FFF;
+    font-family: "Playfair Display";
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 90px; /* 150% */
 }
-
+.footer-brand span
+{
+    color: var(--gold);
+}
 .footer-nav {
     margin-bottom: 30px;
 }
@@ -2325,6 +2336,7 @@ body {
     list-style: none;
     padding: 0;
     margin: 0;
+    
 }
 
 .footer-links li {
@@ -2336,6 +2348,11 @@ body {
     font-size: 1.1rem;
     text-decoration: none;
     transition: color 0.3s ease;
+    color: #FFF;
+    font-family: "Playfair Display";
+    font-size: 20px;
+    font-style: normal;
+font-weight: 400;
 }
 
 .footer-links a:hover {
@@ -2356,21 +2373,9 @@ body {
     justify-content: center;
     text-decoration: none;
     transition: all 0.3s ease;
-}
-
-.social-link.twitter {
+    color: var(--gold);
     background-color: var(--white);
-    color: var(--black);
-}
-
-.social-link.instagram {
-    background-color: var(--gold);
-    color: var(--white);
-}
-
-.social-link.facebook {
-    background-color: var(--white);
-    color: var(--black);
+    border: 3px solid var(--gold);
 }
 
 .social-link:hover {
@@ -2744,7 +2749,6 @@ flex-shrink: 0;
     z-index: 100;
   }
 
-  /* عناصر القائمة */
   .dropdown-item {
     padding: 10px 15px;
     cursor: pointer;
@@ -2754,9 +2758,11 @@ flex-shrink: 0;
     border-bottom: none;
   }
 
-  /* لون العنصر لما تحوم فوقه */
   .dropdown-item:hover {
     background-color: #f0f0f0;
   }
 
-  
+  a
+  {
+    text-decoration: none;
+  }
