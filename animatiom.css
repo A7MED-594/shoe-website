@@ -481,38 +481,6 @@
     animation: jackInTheBox 1.2s ease-out forwards;
 }
 
-/* Hover Effects - No transition on mouse leave */
-.hover-heartbeat {
-    transition: none;
-}
-
-
-
-.hover-pulse {
-    transition: none;
-}
-
-
-.hover-rubber {
-    transition: none;
-}
-
-
-
-.hover-swing {
-    transition: none;
-}
-
-
-
-.hover-tada {
-    transition: none;
-}
-
-
-.hover-wobble {
-    transition: none;
-}
 
 
 /* Stagger Animation Delays */
