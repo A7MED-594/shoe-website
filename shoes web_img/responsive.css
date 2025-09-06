@@ -1,0 +1,165 @@
+/* Responsive Design */
+@media (max-width: 991.98px) {
+    .navbar .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .logo-text {
+        font-size: 1.5rem;
+    }
+    
+    .nav-menu {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 15px;
+        justify-content: flex-start;
+    }
+    
+    .nav-menu .nav-link {
+        padding: 10px 0;
+        border-bottom: 1px solid var(--light-grey);
+        font-size: 1.1rem;
+    }
+    
+    .nav-menu .nav-link:last-child {
+        border-bottom: none;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .navbar .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .logo-text {
+        font-size: 1.3rem;
+    }
+    
+    .search-section {
+        margin: 0 15px;
+    }
+}
+
+/* Large Desktop Styles */
+@media (min-width: 992px) {
+    .nav-menu {
+        gap: 40px;
+    }
+}
+
+/* Large Desktop Styles */
+@media (min-width: 1200px) {
+    .nav-menu {
+        gap: 50px;
+    }
+}
+
+/* Hero Responsive Design */
+@media (max-width: 1199.98px) {
+    .hero-image {
+        margin-left: 200px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .hero-section .container {
+        padding: 0 50px;
+    }
+    
+    .hero-image {
+        margin-left: 0;
+        margin-top: 30px;
+    }
+    
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .background-circle {
+        width: 300px;
+        height: 300px;
+        right: -25px;
+        top: -25px;
+    }
+    
+    .shoe-img {
+        max-width: 250px;
+    }
+    
+    .price-tag {
+        top: 15px;
+        left: -50px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .hero-section .container {
+        padding: 0 20px;
+    }
+    
+    .hero-content {
+        text-align: center;
+        padding: 30px 0;
+    }
+    
+    .hero-image {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-description {
+        max-width: none;
+        margin: 0 auto 35px;
+    }
+    
+    .background-circle {
+        width: 250px;
+        height: 250px;
+        right: -15px;
+        top: -15px;
+    }
+    
+    .shoe-img {
+        max-width: 200px;
+        margin-left: 0;
+    }
+    
+    .price-tag {
+        top: 10px;
+        left: -40px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .hero-section .container {
+        padding: 0 15px;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .background-circle {
+        width: 200px;
+        height: 200px;
+        right: -10px;
+        top: -10px;
+    }
+    
+    .shoe-img {
+        max-width: 150px;
+    }
+    
+    .price-tag {
+        top: 5px;
+        left: -30px;
+        padding: 4px 8px;
+        font-size: 0.75rem;
+    }
+}
