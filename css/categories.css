@@ -1,0 +1,357 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.navbar-container {
+  width: 100%;
+  background-color: white;
+}
+
+/* Top Navbar Styles */
+.top-navbar {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.navbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  font-size: 24px;
+}
+
+/* Logo Styles */
+.navbar-brand {
+ color: #949494;
+font-family: Cinzel;
+font-size: 50px;
+font-style: normal;
+font-weight: 400;
+line-height: normal
+}
+.navbar-brand span {
+  color: #caa766;
+  font-size: normal;
+}
+
+/* Search Bar Styles */
+.search-container {
+  flex: 1;
+  max-width: 28rem;
+  margin: 0 2rem;
+}
+
+.search-wrapper {
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.search-input {
+  width: 100%;
+  background-color: hsl(38.82deg 48.57% 93.14%);
+  border: none;
+  border-radius: 9999px;
+  padding: 0.75rem 1rem 0.75rem 3rem;
+  font-size: 0.875rem;
+  outline: none;
+  transition: background-color 0.2s;
+  
+}
+
+.search-input:focus {
+  background-color: #e5e7eb;
+}
+
+/* User Actions Styles */
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+  font-size: 1.25rem;
+  transition: color 0.2s;
+}
+
+.action-btn:hover {
+  color: #6b7280;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.user-avatar {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-name {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: black;
+}
+
+/* Main Navigation Styles */
+.main-navigation {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+  color: #949494;
+  font-family: Cinzel;
+  font-size: 30px;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+.nav-item {
+  margin: 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #6b7280;
+  font-weight: 500;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: color 0.2s;
+}
+
+.nav-link:hover {
+  color: black;
+}
+
+.nav-link.active {
+  color: #b8860b;
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar-content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .search-container {
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .nav-list {
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .user-actions {
+    gap: 1rem;
+  }
+}
+
+/* Categories */
+.categories-section {
+  background: #FFFFFF;
+  padding: 4rem 0;
+}
+
+.section-subtitle {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #999999;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2C2C2C;
+  margin-bottom: 3rem;
+}
+
+.title-accent { color: #caa766; }
+
+/* Category Cards */
+.category-card {
+  background: none;   /* يشيل الخلفية */
+  border-radius: 0;   /* يشيل الزوايا */
+  box-shadow: none;   /* يشيل الظل */
+  overflow: hidden;
+  transition: 0.3s ease;
+  cursor: pointer;
+  height: 100%;
+}
+
+.category-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+}
+
+.category-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.category-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s ease;
+}
+
+.category-card:hover .category-image img { transform: scale(1.1); }
+
+.category-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.category-card:hover .category-overlay { opacity: 1; }
+
+.category-btn {
+  background: #C8860D;
+  border: none;
+  color: #FFFFFF;
+  padding: 0.5rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: 0.2s ease;
+}
+
+.category-btn:hover {
+  background: #A66F0A;
+  transform: translateY(-2px);
+}
+
+.category-info {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.category-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2C2C2C;
+  margin-bottom: 0.5rem;
+}
+
+.category-count {
+  font-size: 0.9rem;
+  color: #999999;
+}
+
+/* CTA Section */
+.cta-section {
+  background-color: #b9985d;
+  padding: 4rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-content { position: relative; z-index: 2; }
+
+.cta-icon {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.cta-icon i {
+  font-size: 2rem;
+  color: #FFFFFF;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.cta-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+.star {
+  font-size: 1.5rem;
+  color: #000;
+  margin: 0 10px;
+}
+
+/* CTA Button */
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  background-color: #c19a6b;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  color: #C8860D;
+}
