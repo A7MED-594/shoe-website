@@ -196,3 +196,21 @@ window.onresize = adjustSections;
 
     window.addEventListener('scroll', revealOnScroll);
     revealOnScroll();
+
+    document.addEventListener("DOMContentLoaded", function () {
+  let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+  const countSpan = document.getElementById("cart-count");
+
+  function updateCartCount() {
+    cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+    const count = cartItems.length;
+    countSpan.textContent = count;
+    countSpan.style.display = count > 0 ? "inline-block" : "none";
+  }
+
+  // أول تحميل
+  updateCartCount();
+
+  // 🔴 لما يجي حدث cartUpdated نعمل تحديث
+  window.addEventListener("cartUpdated", updateCartCount);
+});
