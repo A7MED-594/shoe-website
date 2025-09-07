@@ -64,7 +64,10 @@ document.addEventListener("DOMContentLoaded", function () {
       const index = parseInt(e.target.dataset.index);
       cartItems.splice(index, 1);
       localStorage.setItem("cart", JSON.stringify(cartItems));
-      renderCart(); // بيحدث مع العدد
+      renderCart();
+
+      // 🔴 نبعث حدث لتحديث العداد في النافبار
+      window.dispatchEvent(new Event("cartUpdated"));
     }
   });
 
@@ -94,17 +97,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // تحديث عند تغيير الحجم أو الزووم
   window.addEventListener('resize', adjustContainer);
-});
-
-// حذف عنصر من الكارت
-container.addEventListener("click", function (e) {
-  if (e.target.classList.contains("remove-btn")) {
-    const index = parseInt(e.target.dataset.index);
-    cartItems.splice(index, 1);
-    localStorage.setItem("cart", JSON.stringify(cartItems));
-    renderCart();
-
-    // 🔴 نبعث حدث لتحديث العداد في النافبار
-    window.dispatchEvent(new Event("cartUpdated"));
-  }
 });

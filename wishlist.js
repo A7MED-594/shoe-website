@@ -11,8 +11,10 @@ document.addEventListener("DOMContentLoaded", () => {
       container.innerHTML = wishlist.map(item => `
         <div class="wishlist-item">
           <img src="${item.image}" alt="${item.name}" class="wishlist-img">
-          <h3>${item.name}</h3>
-          <p>${item.price}</p>
+          <div>
+            <h5>${item.name}</h5>
+            <p class="text-muted">${item.price}</p>
+          </div>
           <button class="remove-btn" data-id="${item.id}">Remove</button>
         </div>
       `).join("");
@@ -23,21 +25,26 @@ document.addEventListener("DOMContentLoaded", () => {
           wishlist = wishlist.filter(item => item.id !== id);
           localStorage.setItem("wishlist", JSON.stringify(wishlist));
           renderWishlist();
+
+          // 🔴 نبعث حدث لتحديث القلب في النافبار
+          window.dispatchEvent(new Event("wishlistUpdated"));
         });
       });
     }
   }
 });
 
+// ==============================
+// Zoom adjustment
 function detectZoom() {
   return Math.round(window.devicePixelRatio * 100);
 }
 
 function adjustContainer() {
-  const zoomPercent = detectZoom(); // مثلاً 80 أو 100
+  const zoomPercent = detectZoom();
   const container = document.querySelector('.container');
 
-  if (!container) return; // تأكد إن العنصر موجود
+  if (!container) return;
 
   if (zoomPercent <= 80) {
     const scaleFactor = zoomPercent / 100;
@@ -48,8 +55,5 @@ function adjustContainer() {
   }
 }
 
-// تنفيذ أول مرة
 adjustContainer();
-
-// إعادة التعديل عند تغيير الحجم (zoom غالبًا بيغير الـ window size)
 window.addEventListener('resize', adjustContainer);
