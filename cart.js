@@ -1,3 +1,60 @@
+function detectZoom() {
+  return Math.round(window.devicePixelRatio * 100);
+}
+
+function adjustSections() {
+  const zoomPercent = detectZoom(); 
+  const shoping = document.querySelector('.shoping');
+  const shopNow = document.querySelector('.Shop-Now');
+
+  if (zoomPercent <= 80) {
+    const scaleFactor = zoomPercent / 100;
+    shoping.style.transform = `scale(${scaleFactor})`;
+    shoping.style.transformOrigin = 'top left';
+
+    shopNow.style.transform = `scale(${scaleFactor})`;
+    shopNow.style.transformOrigin = 'top left';
+
+  } else {
+    shoping.style.transform = 'scale(1)';
+    shopNow.style.transform = 'scale(1)';
+  }
+}
+
+window.onload = adjustSections;
+
+window.onresize = adjustSections;
+
+
+
+ const categories = document.querySelectorAll('.categories');
+
+    categories.forEach(el => {
+      el.style.opacity = "0";
+      el.style.transform = "translateY(40px)";
+      el.style.transition = "all 0.6s ease";
+    });
+
+    function revealOnScroll() {
+      const rect = document.body.getBoundingClientRect();
+
+      categories.forEach((el, i) => {
+        const rect = el.getBoundingClientRect();
+
+        if (rect.top < window.innerHeight - 100) {
+
+          setTimeout(() => {
+            el.style.opacity = "1";
+            el.style.transform = "translateY(0)";
+          }, i * 1); 
+        }
+      });
+    }
+
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll();
+
+
 document.addEventListener("DOMContentLoaded", function () {
   let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
   const container = document.getElementById("cart-items");
@@ -64,10 +121,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const index = parseInt(e.target.dataset.index);
       cartItems.splice(index, 1);
       localStorage.setItem("cart", JSON.stringify(cartItems));
-      renderCart();
-
-      // 🔴 نبعث حدث لتحديث العداد في النافبار
-      window.dispatchEvent(new Event("cartUpdated"));
+      renderCart(); // بيحدث مع العدد
     }
   });
 
@@ -98,3 +152,5 @@ document.addEventListener("DOMContentLoaded", function () {
   // تحديث عند تغيير الحجم أو الزووم
   window.addEventListener('resize', adjustContainer);
 });
+
+
