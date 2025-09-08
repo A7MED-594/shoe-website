@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOELUXE - Reebok Zig Kinetica 3</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <!--  Google Font  -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="single_product.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ================= Header Section ================= -->
+    <header class="header">
+        <div class="container-fluid">
+            <div class="row align-items-center py-3">
+                <!-- Logo -->
+                <div class="col-md-3">
+                    <h1 class="logo">SHOELUXE</h1>
+                </div>
+                <!-- Search Bar -->
+                <div class="col-md-6">
+                    <div class="search-container">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" class="search-input" placeholder="Search">
+                    </div>
+                </div>
+                <!-- Header Icons -->
+                <div class="col-md-3 text-end">
+                    <div class="header-icons">
+                        <i class="far fa-heart"></i>
+                        <i class="fas fa-shopping-bag"></i>
+                        <div class="user-profile">
+                            <img src="img/source/person.jpg" alt="User" class="profile-img">
+                            <span>Muhammad Dava</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Navigation Menu -->
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="#" class="active">HOME</a></li>
+                    <li><a href="#">PRODUCT</a></li>
+                    <li><a href="#">CATEGORIES</a></li>
+                    <li><a href="#">MEN</a></li>
+                    <li><a href="#">WOMEN</a></li>
+                    <li><a href="#">KIDS</a></li>
+                    <li><a href="#">SPORT</a></li>
+                    <li><a href="#">NEW</a></li>
+                    <li><a href="#" class="sale">SALE</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ================= Main Content ================= -->
+    <main class="container my-5">
+        <div class="row">
+
+            <!-- Product Image Section -->
+            <div class="col-lg-6">
+                <div class="product-image-container">
+                    <img src="img/SHOE1.png" alt="Reebok Zig Kinetica 3" class="main-product-image" id="mainImage">
+                </div>
+                <div class="product-thumbnails">
+                    <div class="thumbnail active" onclick="changeImage(this, 'img/SHOE2.png')">
+                        <img src="img/SHOE2.png" alt="Thumbnail 1">
+                    </div>
+                    <div class="thumbnail" onclick="changeImage(this, 'img/SHOE2.png')">
+                        <img src="img/SHOE2.png" alt="Thumbnail 2">
+                    </div>
+                    <div class="thumbnail" onclick="changeImage(this, 'img/SHOE2.png')">
+                        <img src="img/SHOE2.png" alt="Thumbnail 3">
+                    </div>
+                    <div class="thumbnail" onclick="changeImage(this, 'img/SHOE2.png')">
+                        <img src="img/SHOE2.png" alt="Thumbnail 4">
+                    </div>
+                    <div class="more-images">+4 MORE</div>
+                </div>
+            </div>
+
+            <!-- Product Details Section -->
+            <div class="col-lg-6">
+                <div class="product-details">
+                    <!-- Brand Info -->
+                    <div class="brand-badge">
+                        <img src="img/source/logo.jpg" alt="Reebok" class="brand-logo">
+                        <span>Reebok</span>
+                    </div>
+                    <!-- Product Title -->
+                    <h2 class="product-title">Shoes Reebok Zig Kinetica 3</h2>
+                    <!-- Rating and Reviews -->
+                    <div class="rating">
+                        <div class="stars">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27"
+                                fill="none">
+                                <path
+                                    d="M13.3333 0.820068L17.4533 9.16674L26.6667 10.5134L20 17.0067L21.5733 26.1801L13.3333 21.8467L5.09333 26.1801L6.66667 17.0067L0 10.5134L9.21333 9.16674L13.3333 0.820068Z"
+                                    fill="#B9985D" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27"
+                                fill="none">
+                                <path
+                                    d="M13.3333 0.820068L17.4533 9.16674L26.6667 10.5134L20 17.0067L21.5733 26.1801L13.3333 21.8467L5.09333 26.1801L6.66667 17.0067L0 10.5134L9.21333 9.16674L13.3333 0.820068Z"
+                                    fill="#B9985D" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27"
+                                fill="none">
+                                <path
+                                    d="M13.3333 0.820068L17.4533 9.16674L26.6667 10.5134L20 17.0067L21.5733 26.1801L13.3333 21.8467L5.09333 26.1801L6.66667 17.0067L0 10.5134L9.21333 9.16674L13.3333 0.820068Z"
+                                    fill="#B9985D" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27"
+                                fill="none">
+                                <path
+                                    d="M13.3333 0.820068L17.4533 9.16674L26.6667 10.5134L20 17.0067L21.5733 26.1801L13.3333 21.8467L5.09333 26.1801L6.66667 17.0067L0 10.5134L9.21333 9.16674L13.3333 0.820068Z"
+                                    fill="#B9985D" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="27" viewBox="0 0 28 27"
+                                fill="none">
+                                <path
+                                    d="M14.0001 0.820068L18.1201 9.16674L27.3334 10.5134L20.6667 17.0067L22.2401 26.1801L14.0001 21.8467L5.76008 26.1801L7.33341 17.0067L0.666748 10.5134L9.88008 9.16674L14.0001 0.820068Z"
+                                    fill="#414141" />
+                            </svg>
+                        </div>
+                        <span class="review-count">46 Reviews</span>
+                    </div>
+                    <!-- Price -->
+                    <div class="price">
+                        <span class="amount">$199.00</span>
+                    </div>
+                    <!-- Options: Color and Size -->
+                    <div class="product-options">
+                        <!-- Color Options -->
+                        <div class="color-section">
+                            <label>Color</label>
+                            <div class="color-options">
+                                <span class="color-option black active"></span>
+                                <span class="color-option pink"></span>
+                                <span class="color-option gray"></span>
+                            </div>
+                        </div>
+                        <!-- Size Options -->
+                        <div class="size-section">
+                            <label class="size-label">Size</label>
+                            <div class="size-options">
+                                <button class="size-btn">40</button>
+                                <button class="size-btn active">41</button>
+                                <button class="size-btn">42</button>
+                                <button class="size-btn">43</button>
+                                <button class="size-btn">44</button>
+                                <button class="size-btn">45</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Action Buttons -->
+                    <div class="action-buttons">
+                        <button class="btn-add-cart">
+                            <i class="fas fa-shopping-bag"></i>
+                            add to cart
+                        </button>
+                        <button class="btn-wishlist">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <!-- Buy Now Button -->
+                    <button class="btn-buy-now">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= Related Products Section ================= -->
+        <section class="related-products">
+            <div class="container">
+                <h2 class="section-title">You May Also Like</h2>
+                <div class="row">
+                    <div class="col-lg-2 col-md-4 col-6">
+                        <div class="product-card"> <img src="img/sh1.png" alt="Nike Shoes">
+                            <div class="product-info">
+                                <div class="rating">
+                                    <div class="star-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                            viewBox="0 0 32 32" fill="none">
+                                            <path
+                                                d="M16 2.66699L20.12 11.0137L29.3333 12.3603L22.6666 18.8537L24.24 28.027L16 23.6937L7.75996 28.027L9.33329 18.8537L2.66663 12.3603L11.88 11.0137L16 2.66699Z"
+                                                fill="#B9985D" />
+                                        </svg>
+                                    </div> <span class="review-text">(11.2
+                                        Reviews)</span>
+                                </div>
+                                <h5>Nike Shoes</h5>
+                                <div class="price-info"> <span class="current-price">$210</span> <span
+                                        class="original-price">Sold out 82%</span>
+
+                                    <button class="cart-btn">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M9 22C9.55228 22 10 21.5523 10 21C10 20.4477 9.55228 20 9 20C8.44772 20 8 20.4477 8 21C8 21.5523 8.44772 22 9 22Z"
+                                                stroke="white" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M20 22C20.5523 22 21 21.5523 21 21C21 20.4477 20.5523 20 20 20C19.4477 20 19 20.4477 19 21C19 21.5523 19.4477 22 20 22Z"
+                                                stroke="white" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6"
+                                                stroke="white" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-6">
+                        <div class="product-card"> <img src="img/sh2.png" alt="Nike Shoes">
+                            <div class="product-info">
+                                <div class="rating">
+                                    <div class="star-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                            viewBox="0 0 32 32" fill="none">
+                                            <path
+                                                d="M16 2.66699L20.12 11.0137L29.3333 12.3603L22.6666 18.8537L24.24 28.027L16 23.6937L7.75996 28.027L9.33329 18.8537L2.66663 12.3603L11.88 11.0137L16 2.66699Z"
+                                                fill="#B9985D" />
+                                        </svg>
+                                    </div>
+                                    <span class="review-text">(11.2 Reviews)</span>
+                                </div>
+                                <h5>Nike Shoes</h5>
+                                <div class="price-info"> <span class="current-price">$210</span>
+                                    <span class="original-price">Sold out 82%</span>
+                                    <button class="cart-btn">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M9 22C9.55228 22 10 21.5523 10 21C10 20.4477 9.55228 20 9 20C8.44772 20 8 20.4477 8 21C8 21.5523 8.44772 22 9 22Z"
+                                                stroke="white" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M20 22C20.5523 22 21 21.5523 21 21C21 20.4477 20.5523 20 20 20C19.4477 20 19 20.4477 19 21C19 21.5523 19.4477 22 20 22Z"
+                                                stroke="white" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6"
+                                                stroke="white" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-6">
+                        <div class="product-card"> <img src="img/sh3.png" alt="Nike Shoes">
+                            <div class="product-info">
+                                <div class="rating">
+                                    <div class="star-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                            viewBox="0 0 32 32" fill="none">
+                                            <path
+                                                d="M16 2.66699L20.12 11.0137L29.3333 12.3603L22.6666 18.8537L24.24 28.027L16 23.6937L7.75996 28.027L9.33329 18.8537L2.66663 12.3603L11.88 11.0137L16 2.66699Z"
+                                                fill="#B9985D" />
+                                        </svg>
+                                    </div> <span class="review-text">(11.2
+                                        Reviews)</span>
+                                </div>
+                                <h5>Nike Shoes</h5>
+                                <div class="price-info"> <span class="current-price">$210</span> <span
+                                        class="original-price">Sold out 82%</span>
+                                    <button class="cart-btn">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M9 22C9.55228 22 10 21.5523 10 21C10 20.4477 9.55228 20 9 20C8.44772 20 8 20.4477 8 21C8 21.5523 8.44772 22 9 22Z"
+                                                stroke="white" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M20 22C20.5523 22 21 21.5523 21 21C21 20.4477 20.5523 20 20 20C19.4477 20 19 20.4477 19 21C19 21.5523 19.4477 22 20 22Z"
+                                                stroke="white" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6"
+                                                stroke="white" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-6">
+                        <div class="product-card"> <img src="img/sh4.png" alt="Nike Shoes">
+                            <div class="product-info">
+                                <div class="rating">
+                                    <div class="star-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                            viewBox="0 0 32 32" fill="none">
+                                            <path
+                                                d="M16 2.66699L20.12 11.0137L29.3333 12.3603L22.6666 18.8537L24.24 28.027L16 23.6937L7.75996 28.027L9.33329 18.8537L2.66663 12.3603L11.88 11.0137L16 2.66699Z"
+                                                fill="#B9985D" />
+                                        </svg>
+                                    </div> <span class="review-text">(11.2
+                                        Reviews)</span>
+                                </div>
+                                <h5>Nike Shoes</h5>
+                                <div class="price-info"> <span class="current-price">$210</span> <span
+                                        class="original-price">Sold out 82%</span>
+                                    <button class="cart-btn">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M9 22C9.55228 22 10 21.5523 10 21C10 20.4477 9.55228 20 9 20C8.44772 20 8 20.4477 8 21C8 21.5523 8.44772 22 9 22Z"
+                                                stroke="white" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M20 22C20.5523 22 21 21.5523 21 21C21 20.4477 20.5523 20 20 20C19.4477 20 19 20.4477 19 21C19 21.5523 19.4477 22 20 22Z"
+                                                stroke="white" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6"
+                                                stroke="white" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-6">
+                        <div class="product-card"> <img src="img/sh5.png" alt="Nike Shoes">
+                            <div class="product-info">
+                                <div class="rating">
+                                    <div class="star-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                            viewBox="0 0 32 32" fill="none">
+                                            <path
+                                                d="M16 2.66699L20.12 11.0137L29.3333 12.3603L22.6666 18.8537L24.24 28.027L16 23.6937L7.75996 28.027L9.33329 18.8537L2.66663 12.3603L11.88 11.0137L16 2.66699Z"
+                                                fill="#B9985D" />
+                                        </svg>
+                                    </div> <span class="review-text">(11.2
+                                        Reviews)</span>
+                                </div>
+                                <h5>Nike Shoes</h5>
+                                <div class="price-info"> <span class="current-price">$210</span> <span
+                                        class="original-price">Sold out 82%</span>
+                                    <button class="cart-btn">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M9 22C9.55228 22 10 21.5523 10 21C10 20.4477 9.55228 20 9 20C8.44772 20 8 20.4477 8 21C8 21.5523 8.44772 22 9 22Z"
+                                                stroke="white" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M20 22C20.5523 22 21 21.5523 21 21C21 20.4477 20.5523 20 20 20C19.4477 20 19 20.4477 19 21C19 21.5523 19.4477 22 20 22Z"
+                                                stroke="white" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6"
+                                                stroke="white" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= Reviews Section ================= -->
+        <section class="reviews-section mt-5">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h3>Reviews</h3>
+                    <!-- ================= Reviews List ================= -->
+
+                    <!-- Single Review Item 1 -->
+                    <div class="review-item">
+                        <div class="reviewer-info">
+                            <img src="img/source/p1.jpg" alt="Ahmed Moustafa" class="reviewer-avatar">
+                            <div class="reviewer-details">
+                                <h5>Ahmed Moustafa <span class="review-date">Yester Day</span></h5>
+                                <div class="staars">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16"
+                                        fill="none">
+                                        <path
+                                            d="M8.07571 0L10.5711 5.05539L16.1514 5.87104L12.1136 9.80391L13.0665 15.36L8.07571 12.7354L3.08492 15.36L4.03785 9.80391L0 5.87104L5.58032 5.05539L8.07571 0Z"
+                                            fill="#B9985D" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16"
+                                        fill="none">
+                                        <path
+                                            d="M8.07571 0L10.5711 5.05539L16.1514 5.87104L12.1136 9.80391L13.0665 15.36L8.07571 12.7354L3.08492 15.36L4.03785 9.80391L0 5.87104L5.58032 5.05539L8.07571 0Z"
+                                            fill="#B9985D" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16"
+                                        fill="none">
+                                        <path
+                                            d="M8.07571 0L10.5711 5.05539L16.1514 5.87104L12.1136 9.80391L13.0665 15.36L8.07571 12.7354L3.08492 15.36L4.03785 9.80391L0 5.87104L5.58032 5.05539L8.07571 0Z"
+                                            fill="#B9985D" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16"
+                                        fill="none">
+                                        <path
+                                            d="M8.52993 0L11.0253 5.05539L16.6056 5.87104L12.5678 9.80391L13.5207 15.36L8.52993 12.7354L3.53914 15.36L4.49208 9.80391L0.454224 5.87104L6.03454 5.05539L8.52993 0Z"
+                                            fill="#414141" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16"
+                                        fill="none">
+                                        <path
+                                            d="M8.52993 0L11.0253 5.05539L16.6056 5.87104L12.5678 9.80391L13.5207 15.36L8.52993 12.7354L3.53914 15.36L4.49208 9.80391L0.454224 5.87104L6.03454 5.05539L8.52993 0Z"
+                                            fill="#414141" />
+                                    </svg>
+                                </div>
+                                <p>Excellent Shoes, it's very good</p>
+                                <div class="review-actions">
+                                    <button class="reply-btn">Reply</button>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21"
+                                        fill="none">
+                                        <path
+                                            d="M5.83329 9.52637L9.16663 2.02637C9.82967 2.02637 10.4656 2.28976 10.9344 2.7586C11.4032 3.22744 11.6666 3.86333 11.6666 4.52637V7.8597H16.3833C16.6249 7.85697 16.8642 7.90679 17.0846 8.00572C17.305 8.10464 17.5013 8.25031 17.6598 8.43263C17.8184 8.61495 17.9354 8.82955 18.0027 9.06158C18.0701 9.2936 18.0862 9.5375 18.05 9.77637L16.9 17.2764C16.8397 17.6738 16.6378 18.036 16.3315 18.2964C16.0253 18.5567 15.6352 18.6976 15.2333 18.693H5.83329M5.83329 9.52637V18.693M5.83329 9.52637H3.33329C2.89127 9.52637 2.46734 9.70196 2.15478 10.0145C1.84222 10.3271 1.66663 10.751 1.66663 11.193V17.0264C1.66663 17.4684 1.84222 17.8923 2.15478 18.2049C2.46734 18.5174 2.89127 18.693 3.33329 18.693H5.83329"
+                                            stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21"
+                                        fill="none">
+                                        <path
+                                            d="M14.1667 11.1933L10.8334 18.6933C10.1703 18.6933 9.53443 18.4299 9.06559 17.9611C8.59675 17.4923 8.33336 16.8564 8.33336 16.1933V12.86H3.61669C3.3751 12.8627 3.13581 12.8129 2.91538 12.714C2.69496 12.6151 2.49868 12.4694 2.34014 12.2871C2.18161 12.1048 2.0646 11.8902 1.99724 11.6581C1.92988 11.4261 1.91377 11.1822 1.95003 10.9433L3.10003 3.44334C3.16029 3.04591 3.36216 2.68366 3.66844 2.42333C3.97471 2.163 4.36475 2.02212 4.76669 2.02667H14.1667M14.1667 11.1933V2.02667M14.1667 11.1933H16.3917C16.8633 11.2017 17.3216 11.0366 17.6795 10.7293C18.0375 10.4221 18.2701 9.99412 18.3334 9.52667V3.69334C18.2701 3.22588 18.0375 2.79792 17.6795 2.49068C17.3216 2.18345 16.8633 2.01833 16.3917 2.02667H14.1667"
+                                            stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Single Review Item 1 -->
+
+
+                    <!-- Single Review Item 2 -->
+                    <div class="review-item">
+                        <div class="reviewer-info">
+                            <img src="img/source/p2.jpg" alt="Sara Ali" class="reviewer-avatar">
+                            <div class="reviewer-details">
+                                <h5>Ayman Mohammed <span class="review-date">Yester Day</span></h5>
+                                <div class="staars">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16"
+                                        fill="none">
+                                        <path
+                                            d="M8.07571 0.359863L10.5711 5.41526L16.1514 6.2309L12.1136 10.1638L13.0665 15.7199L8.07571 13.0953L3.08492 15.7199L4.03785 10.1638L0 6.2309L5.58032 5.41526L8.07571 0.359863Z"
+                                            fill="#B9985D" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16"
+                                        fill="none">
+                                        <path
+                                            d="M8.07571 0.359863L10.5711 5.41526L16.1514 6.2309L12.1136 10.1638L13.0665 15.7199L8.07571 13.0953L3.08492 15.7199L4.03785 10.1638L0 6.2309L5.58032 5.41526L8.07571 0.359863Z"
+                                            fill="#B9985D" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16"
+                                        fill="none">
+                                        <path
+                                            d="M8.07571 0.359863L10.5711 5.41526L16.1514 6.2309L12.1136 10.1638L13.0665 15.7199L8.07571 13.0953L3.08492 15.7199L4.03785 10.1638L0 6.2309L5.58032 5.41526L8.07571 0.359863Z"
+                                            fill="#B9985D" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16"
+                                        fill="none">
+                                        <path
+                                            d="M8.68142 0.359863L11.1768 5.41526L16.7571 6.2309L12.7193 10.1638L13.6722 15.7199L8.68142 13.0953L3.69063 15.7199L4.64357 10.1638L0.605713 6.2309L6.18603 5.41526L8.68142 0.359863Z"
+                                            fill="#414141" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16"
+                                        fill="none">
+                                        <path
+                                            d="M8.68142 0.359863L11.1768 5.41526L16.7571 6.2309L12.7193 10.1638L13.6722 15.7199L8.68142 13.0953L3.69063 15.7199L4.64357 10.1638L0.605713 6.2309L6.18603 5.41526L8.68142 0.359863Z"
+                                            fill="#414141" />
+                                    </svg>
+                                </div>
+                                <p>Excellent Shoes, it's very good</p>
+                                <div class="review-actions">
+                                    <button class="reply-btn">Reply</button>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21"
+                                        fill="none">
+                                        <path
+                                            d="M5.83329 9.52637L9.16663 2.02637C9.82967 2.02637 10.4656 2.28976 10.9344 2.7586C11.4032 3.22744 11.6666 3.86333 11.6666 4.52637V7.8597H16.3833C16.6249 7.85697 16.8642 7.90679 17.0846 8.00572C17.305 8.10464 17.5013 8.25031 17.6598 8.43263C17.8184 8.61495 17.9354 8.82955 18.0027 9.06158C18.0701 9.2936 18.0862 9.5375 18.05 9.77637L16.9 17.2764C16.8397 17.6738 16.6378 18.036 16.3315 18.2964C16.0253 18.5567 15.6352 18.6976 15.2333 18.693H5.83329M5.83329 9.52637V18.693M5.83329 9.52637H3.33329C2.89127 9.52637 2.46734 9.70196 2.15478 10.0145C1.84222 10.3271 1.66663 10.751 1.66663 11.193V17.0264C1.66663 17.4684 1.84222 17.8923 2.15478 18.2049C2.46734 18.5174 2.89127 18.693 3.33329 18.693H5.83329"
+                                            stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21"
+                                        fill="none">
+                                        <path
+                                            d="M14.1667 11.1933L10.8334 18.6933C10.1703 18.6933 9.53443 18.4299 9.06559 17.9611C8.59675 17.4923 8.33336 16.8564 8.33336 16.1933V12.86H3.61669C3.3751 12.8627 3.13581 12.8129 2.91538 12.714C2.69496 12.6151 2.49868 12.4694 2.34014 12.2871C2.18161 12.1048 2.0646 11.8902 1.99724 11.6581C1.92988 11.4261 1.91377 11.1822 1.95003 10.9433L3.10003 3.44334C3.16029 3.04591 3.36216 2.68366 3.66844 2.42333C3.97471 2.163 4.36475 2.02212 4.76669 2.02667H14.1667M14.1667 11.1933V2.02667M14.1667 11.1933H16.3917C16.8633 11.2017 17.3216 11.0366 17.6795 10.7293C18.0375 10.4221 18.2701 9.99412 18.3334 9.52667V3.69334C18.2701 3.22588 18.0375 2.79792 17.6795 2.49068C17.3216 2.18345 16.8633 2.01833 16.3917 2.02667H14.1667"
+                                            stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Single Review Item 2 -->
+
+
+                    <!-- Single Review Item 3 -->
+                    <div class="review-item">
+                        <div class="reviewer-info">
+                            <img src="img/source/p3.jpg" alt="Mohamed Adel" class="reviewer-avatar">
+                            <div class="reviewer-details">
+                                <h5>Hala Emad <span class="review-date">Yester Day</span></h5>
+                                <div class="staars">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16"
+                                        fill="none">
+                                        <path
+                                            d="M8.07571 0.359863L10.5711 5.41526L16.1514 6.2309L12.1136 10.1638L13.0665 15.7199L8.07571 13.0953L3.08492 15.7199L4.03785 10.1638L0 6.2309L5.58032 5.41526L8.07571 0.359863Z"
+                                            fill="#B9985D" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16"
+                                        fill="none">
+                                        <path
+                                            d="M8.07571 0.359863L10.5711 5.41526L16.1514 6.2309L12.1136 10.1638L13.0665 15.7199L8.07571 13.0953L3.08492 15.7199L4.03785 10.1638L0 6.2309L5.58032 5.41526L8.07571 0.359863Z"
+                                            fill="#B9985D" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16"
+                                        fill="none">
+                                        <path
+                                            d="M8.07571 0.359863L10.5711 5.41526L16.1514 6.2309L12.1136 10.1638L13.0665 15.7199L8.07571 13.0953L3.08492 15.7199L4.03785 10.1638L0 6.2309L5.58032 5.41526L8.07571 0.359863Z"
+                                            fill="#B9985D" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16"
+                                        fill="none">
+                                        <path
+                                            d="M8.52993 0.359863L11.0253 5.41526L16.6056 6.2309L12.5678 10.1638L13.5207 15.7199L8.52993 13.0953L3.53914 15.7199L4.49208 10.1638L0.454224 6.2309L6.03454 5.41526L8.52993 0.359863Z"
+                                            fill="#414141" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16"
+                                        fill="none">
+                                        <path
+                                            d="M8.52993 0.359863L11.0253 5.41526L16.6056 6.2309L12.5678 10.1638L13.5207 15.7199L8.52993 13.0953L3.53914 15.7199L4.49208 10.1638L0.454224 6.2309L6.03454 5.41526L8.52993 0.359863Z"
+                                            fill="#414141" />
+                                    </svg>
+                                </div>
+                                <p>Excellent Shoes, it's very good.</p>
+                                <div class="review-actions">
+                                    <button class="reply-btn">Reply</button>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21"
+                                        fill="none">
+                                        <path
+                                            d="M5.83329 9.52637L9.16663 2.02637C9.82967 2.02637 10.4656 2.28976 10.9344 2.7586C11.4032 3.22744 11.6666 3.86333 11.6666 4.52637V7.8597H16.3833C16.6249 7.85697 16.8642 7.90679 17.0846 8.00572C17.305 8.10464 17.5013 8.25031 17.6598 8.43263C17.8184 8.61495 17.9354 8.82955 18.0027 9.06158C18.0701 9.2936 18.0862 9.5375 18.05 9.77637L16.9 17.2764C16.8397 17.6738 16.6378 18.036 16.3315 18.2964C16.0253 18.5567 15.6352 18.6976 15.2333 18.693H5.83329M5.83329 9.52637V18.693M5.83329 9.52637H3.33329C2.89127 9.52637 2.46734 9.70196 2.15478 10.0145C1.84222 10.3271 1.66663 10.751 1.66663 11.193V17.0264C1.66663 17.4684 1.84222 17.8923 2.15478 18.2049C2.46734 18.5174 2.89127 18.693 3.33329 18.693H5.83329"
+                                            stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21"
+                                        fill="none">
+                                        <path
+                                            d="M14.1667 11.1933L10.8334 18.6933C10.1703 18.6933 9.53443 18.4299 9.06559 17.9611C8.59675 17.4923 8.33336 16.8564 8.33336 16.1933V12.86H3.61669C3.3751 12.8627 3.13581 12.8129 2.91538 12.714C2.69496 12.6151 2.49868 12.4694 2.34014 12.2871C2.18161 12.1048 2.0646 11.8902 1.99724 11.6581C1.92988 11.4261 1.91377 11.1822 1.95003 10.9433L3.10003 3.44334C3.16029 3.04591 3.36216 2.68366 3.66844 2.42333C3.97471 2.163 4.36475 2.02212 4.76669 2.02667H14.1667M14.1667 11.1933V2.02667M14.1667 11.1933H16.3917C16.8633 11.2017 17.3216 11.0366 17.6795 10.7293C18.0375 10.4221 18.2701 9.99412 18.3334 9.52667V3.69334C18.2701 3.22588 18.0375 2.79792 17.6795 2.49068C17.3216 2.18345 16.8633 2.01833 16.3917 2.02667H14.1667"
+                                            stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Single Review Item 3 -->
+
+
+                    <!-- Single Review Item 4 -->
+                    <div class="review-item">
+                        <div class="reviewer-info">
+                            <img src="img/source/p4.jpg" alt="Layla Hassan" class="reviewer-avatar">
+                            <div class="reviewer-details">
+                                <h5>Yassen ashraf <span class="review-date">Yester Day</span></h5>
+                                <div class="staars">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16"
+                                        fill="none">
+                                        <path
+                                            d="M8.07571 0.359863L10.5711 5.41526L16.1514 6.2309L12.1136 10.1638L13.0665 15.7199L8.07571 13.0953L3.08492 15.7199L4.03785 10.1638L0 6.2309L5.58032 5.41526L8.07571 0.359863Z"
+                                            fill="#B9985D" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16"
+                                        fill="none">
+                                        <path
+                                            d="M8.07571 0.359863L10.5711 5.41526L16.1514 6.2309L12.1136 10.1638L13.0665 15.7199L8.07571 13.0953L3.08492 15.7199L4.03785 10.1638L0 6.2309L5.58032 5.41526L8.07571 0.359863Z"
+                                            fill="#B9985D" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16"
+                                        fill="none">
+                                        <path
+                                            d="M8.07571 0.359863L10.5711 5.41526L16.1514 6.2309L12.1136 10.1638L13.0665 15.7199L8.07571 13.0953L3.08492 15.7199L4.03785 10.1638L0 6.2309L5.58032 5.41526L8.07571 0.359863Z"
+                                            fill="#B9985D" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16"
+                                        fill="none">
+                                        <path
+                                            d="M8.52993 0.359863L11.0253 5.41526L16.6056 6.2309L12.5678 10.1638L13.5207 15.7199L8.52993 13.0953L3.53914 15.7199L4.49208 10.1638L0.454224 6.2309L6.03454 5.41526L8.52993 0.359863Z"
+                                            fill="#414141" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16"
+                                        fill="none">
+                                        <path
+                                            d="M8.52993 0.359863L11.0253 5.41526L16.6056 6.2309L12.5678 10.1638L13.5207 15.7199L8.52993 13.0953L3.53914 15.7199L4.49208 10.1638L0.454224 6.2309L6.03454 5.41526L8.52993 0.359863Z"
+                                            fill="#414141" />
+                                    </svg>
+                                </div>
+                                <p>Excellent Shoes, it's very good.</p>
+                                <div class="review-actions">
+                                    <button class="reply-btn">Reply</button>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21"
+                                        fill="none">
+                                        <path
+                                            d="M5.83329 9.52637L9.16663 2.02637C9.82967 2.02637 10.4656 2.28976 10.9344 2.7586C11.4032 3.22744 11.6666 3.86333 11.6666 4.52637V7.8597H16.3833C16.6249 7.85697 16.8642 7.90679 17.0846 8.00572C17.305 8.10464 17.5013 8.25031 17.6598 8.43263C17.8184 8.61495 17.9354 8.82955 18.0027 9.06158C18.0701 9.2936 18.0862 9.5375 18.05 9.77637L16.9 17.2764C16.8397 17.6738 16.6378 18.036 16.3315 18.2964C16.0253 18.5567 15.6352 18.6976 15.2333 18.693H5.83329M5.83329 9.52637V18.693M5.83329 9.52637H3.33329C2.89127 9.52637 2.46734 9.70196 2.15478 10.0145C1.84222 10.3271 1.66663 10.751 1.66663 11.193V17.0264C1.66663 17.4684 1.84222 17.8923 2.15478 18.2049C2.46734 18.5174 2.89127 18.693 3.33329 18.693H5.83329"
+                                            stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21"
+                                        fill="none">
+                                        <path
+                                            d="M14.1667 11.1933L10.8334 18.6933C10.1703 18.6933 9.53443 18.4299 9.06559 17.9611C8.59675 17.4923 8.33336 16.8564 8.33336 16.1933V12.86H3.61669C3.3751 12.8627 3.13581 12.8129 2.91538 12.714C2.69496 12.6151 2.49868 12.4694 2.34014 12.2871C2.18161 12.1048 2.0646 11.8902 1.99724 11.6581C1.92988 11.4261 1.91377 11.1822 1.95003 10.9433L3.10003 3.44334C3.16029 3.04591 3.36216 2.68366 3.66844 2.42333C3.97471 2.163 4.36475 2.02212 4.76669 2.02667H14.1667M14.1667 11.1933V2.02667M14.1667 11.1933H16.3917C16.8633 11.2017 17.3216 11.0366 17.6795 10.7293C18.0375 10.4221 18.2701 9.99412 18.3334 9.52667V3.69334C18.2701 3.22588 18.0375 2.79792 17.6795 2.49068C17.3216 2.18345 16.8633 2.01833 16.3917 2.02667H14.1667"
+                                            stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Single Review Item 4 -->
+
+                    <!-- ================= /Reviews List ================= -->
+                  
+                    <!-- Write Review Textarea -->
+                    <div class="write-review">
+                        <textarea placeholder="Write Comment..." class="review-textarea"></textarea>
+                    </div>
+                </div>
+
+                <!-- Rating Summary (Right Side) -->
+                <div class="col-lg-4">
+                    <div class="rating-summary">
+                        <!-- Overall Rating -->
+                        <div class="overall-rating">
+                            <div class="rating-score">
+                                <div class="staars">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="46" viewBox="0 0 48 46"
+                                        fill="none">
+                                        <path
+                                            d="M23.9999 0L31.3692 14.9292L47.8485 17.3379L35.9242 28.9522L38.7384 45.36L23.9999 37.6092L9.26153 45.36L12.0757 28.9522L0.151367 17.3379L16.6307 14.9292L23.9999 0Z"
+                                            fill="#B9985D" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="46" viewBox="0 0 48 46"
+                                        fill="none">
+                                        <path
+                                            d="M23.9999 0L31.3692 14.9292L47.8485 17.3379L35.9242 28.9522L38.7384 45.36L23.9999 37.6092L9.26153 45.36L12.0757 28.9522L0.151367 17.3379L16.6307 14.9292L23.9999 0Z"
+                                            fill="#B9985D" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="46" viewBox="0 0 48 46"
+                                        fill="none">
+                                        <path
+                                            d="M23.9999 0L31.3692 14.9292L47.8485 17.3379L35.9242 28.9522L38.7384 45.36L23.9999 37.6092L9.26153 45.36L12.0757 28.9522L0.151367 17.3379L16.6307 14.9292L23.9999 0Z"
+                                            fill="#B9985D" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="46" viewBox="0 0 48 46"
+                                        fill="none">
+                                        <path
+                                            d="M23.9999 0L31.3692 14.9292L47.8485 17.3379L35.9242 28.9522L38.7384 45.36L23.9999 37.6092L9.26153 45.36L12.0757 28.9522L0.151367 17.3379L16.6307 14.9292L23.9999 0Z"
+                                            fill="#B9985D" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="46" viewBox="0 0 48 46"
+                                        fill="none">
+                                        <path
+                                            d="M23.9999 0L31.3692 14.9292L47.8485 17.3379L35.9242 28.9522L38.7384 45.36L23.9999 37.6092L9.26153 45.36L12.0757 28.9522L0.151367 17.3379L16.6307 14.9292L23.9999 0Z"
+                                            fill="#B9985D" />
+                                    </svg>
+                                    <span class="rating-number">4.6</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Breakdown Bars -->
+                        <div class="rating-breakdown">
+                            <div class="rating-bar">
+                                <span>5</span>
+                                <div class="bar">
+                                    <div class="fill" style="width: 90%;"></div>
+                                </div>
+                            </div>
+                            <div class="rating-bar">
+                                <span>4</span>
+                                <div class="bar">
+                                    <div class="fill" style="width: 80%;"></div>
+                                </div>
+                            </div>
+                            <div class="rating-bar">
+                                <span>3</span>
+                                <div class="bar">
+                                    <div class="fill" style="width: 60%;"></div>
+                                </div>
+                            </div>
+                            <div class="rating-bar">
+                                <span>2</span>
+                                <div class="bar">
+                                    <div class="fill" style="width: 40%;"></div>
+                                </div>
+                            </div>
+                            <div class="rating-bar">
+                                <span>1</span>
+                                <div class="bar">
+                                    <div class="fill" style="width: 20%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ================= Footer Section ================= -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- Left Content -->
+                <div class="col-md-6">
+                    <div class="footer-content">
+                        <h2>Are You Interested</h2>
+                        <a href="#" class="shopping-link">Shopping Now</a>
+                    </div>
+                </div>
+                <!-- Right Links -->
+                <div class="col-md-6">
+                    <div class="footer-links">
+                        <h3>ShoesLuxe</h3>
+                        <ul>
+                            <li><a href="#">Shop</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="single_product.js"></script>
+    <script>
+        document.body.style.zoom = "80%";
+    </script>
+</body>
+
+</html>
