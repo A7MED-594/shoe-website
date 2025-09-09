@@ -1,66 +1,9 @@
-function detectZoom() {
-  return Math.round(window.devicePixelRatio * 100);
-}
-
-function adjustSections() {
-  const zoomPercent = detectZoom(); 
-  const shoping = document.querySelector('.shoping');
-  const shopNow = document.querySelector('.Shop-Now');
-
-  if (zoomPercent <= 80) {
-    const scaleFactor = zoomPercent / 100;
-    shoping.style.transform = `scale(${scaleFactor})`;
-    shoping.style.transformOrigin = 'top left';
-
-    shopNow.style.transform = `scale(${scaleFactor})`;
-    shopNow.style.transformOrigin = 'top left';
-
-  } else {
-    shoping.style.transform = 'scale(1)';
-    shopNow.style.transform = 'scale(1)';
-  }
-}
-
-window.onload = adjustSections;
-
-window.onresize = adjustSections;
-
-
-
- const categories = document.querySelectorAll('.categories');
-
-    categories.forEach(el => {
-      el.style.opacity = "0";
-      el.style.transform = "translateY(40px)";
-      el.style.transition = "all 0.6s ease";
-    });
-
-    function revealOnScroll() {
-      const rect = document.body.getBoundingClientRect();
-
-      categories.forEach((el, i) => {
-        const rect = el.getBoundingClientRect();
-
-        if (rect.top < window.innerHeight - 100) {
-
-          setTimeout(() => {
-            el.style.opacity = "1";
-            el.style.transform = "translateY(0)";
-          }, i * 1); 
-        }
-      });
-    }
-
-    window.addEventListener('scroll', revealOnScroll);
-    revealOnScroll();
-
-
 document.addEventListener("DOMContentLoaded", function () {
   let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
   const container = document.getElementById("cart-items");
   const countSpan = document.getElementById("cart-count");
 
-  // تحديث عداد الكارت في النافبار
+  // ✅ تحديث عداد الكارت في النافبار
   function updateCartCount() {
     if (!countSpan) return;
     const count = cartItems.length;
@@ -68,8 +11,10 @@ document.addEventListener("DOMContentLoaded", function () {
     countSpan.style.display = count > 0 ? "inline-block" : "none";
   }
 
-  // عرض عناصر الكارت
+  // ✅ عرض عناصر الكارت
   function renderCart() {
+    if (!container) return; // لو مش في صفحة الكارت
+
     container.innerHTML = "";
 
     if (cartItems.length === 0) {
@@ -112,45 +57,35 @@ document.addEventListener("DOMContentLoaded", function () {
     updateCartCount();
   }
 
-  // أول تحميل
-  renderCart();
+  // ✅ حذف عنصر من الكارت
+  if (container) {
+    container.addEventListener("click", function (e) {
+      if (e.target.classList.contains("remove-btn")) {
+        const index = parseInt(e.target.dataset.index);
+        cartItems.splice(index, 1);
+        localStorage.setItem("cart", JSON.stringify(cartItems));
+        renderCart();
+        updateCartCount();
+      }
+    });
+  }
 
-  // حذف عنصر من الكارت
-  container.addEventListener("click", function (e) {
-    if (e.target.classList.contains("remove-btn")) {
-      const index = parseInt(e.target.dataset.index);
-      cartItems.splice(index, 1);
+  // ✅ إضافة منتج للكارت (مثال لو عندك زرار Add to Cart)
+  document.body.addEventListener("click", function (e) {
+    if (e.target.classList.contains("add-to-cart")) {
+      const product = {
+        name: e.target.dataset.name,
+        price: e.target.dataset.price,
+        img: e.target.dataset.img,
+      };
+      cartItems.push(product);
       localStorage.setItem("cart", JSON.stringify(cartItems));
-      renderCart(); // بيحدث مع العدد
+      renderCart();
+      updateCartCount();
     }
   });
 
-  // ==============================
-  // كود الزووم
-  function detectZoom() {
-    return Math.round(window.devicePixelRatio * 100);
-  }
-
-  function adjustContainer() {
-    const zoomPercent = detectZoom();
-    const mainContainer = document.querySelector('.container');
-
-    if (!mainContainer) return;
-
-    if (zoomPercent <= 80) {
-      const scaleFactor = zoomPercent / 100;
-      mainContainer.style.transform = `scale(${scaleFactor})`;
-      mainContainer.style.transformOrigin = 'top left';
-    } else {
-      mainContainer.style.transform = 'scale(1)';
-    }
-  }
-
-  // تنفيذ أول مرة
-  adjustContainer();
-
-  // تحديث عند تغيير الحجم أو الزووم
-  window.addEventListener('resize', adjustContainer);
+  // ✅ أول تحميل
+  renderCart();
+  updateCartCount();
 });
-
-
