@@ -1,7 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // ===============================
-  // Wishlist (القلب)
-  // ===============================
   const hearts = document.querySelectorAll(".product-icons .icon-circle svg");
   const navbarHeart = document.getElementById("navbar-heart");
   const heartCount = document.getElementById("heart-count");
@@ -55,33 +52,59 @@ document.addEventListener("DOMContentLoaded", () => {
       heartCount.style.display = "none";
     }
   }
+});
 
-  // ===============================
-  // Dropdown Menu
-  // ===============================
-  const menuBtn = document.getElementById("menuBtn");
-  const dropdown = document.getElementById("dropdownMenu");
 
-  menuBtn.addEventListener("click", () => {
-    if (dropdown.style.display === "block") {
-      dropdown.style.display = "none";
-      dropdown.setAttribute("aria-hidden", "true");
+
+
+const menuBtn = document.getElementById('menuBtn');
+  const dropdown = document.getElementById('dropdownMenu');
+
+  menuBtn.addEventListener('click', () => {
+    if (dropdown.style.display === 'block') {
+      dropdown.style.display = 'none';
+      dropdown.setAttribute('aria-hidden', 'true');
     } else {
-      dropdown.style.display = "block";
-      dropdown.setAttribute("aria-hidden", "false");
+      dropdown.style.display = 'block';
+      dropdown.setAttribute('aria-hidden', 'false');
     }
   });
 
-  document.addEventListener("click", (event) => {
+  // إخفاء القائمة لو ضغطت في أي مكان خارجها
+  document.addEventListener('click', (event) => {
     if (!menuBtn.contains(event.target) && !dropdown.contains(event.target)) {
-      dropdown.style.display = "none";
-      dropdown.setAttribute("aria-hidden", "true");
+      dropdown.style.display = 'none';
+      dropdown.setAttribute('aria-hidden', 'true');
     }
   });
 
-  // ===============================
-  // Add to Cart
-  // ===============================
+
+
+  // Listen to all Add to Cart buttons
+document.querySelectorAll('.btn-cart').forEach(button => {
+  button.addEventListener('click', function () {
+    const name = this.getAttribute('data-name');
+    const price = this.getAttribute('data-price');
+    const img = this.getAttribute('data-img');
+
+    const product = { name, price, img };
+
+    // Get existing cart or create new
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // Add product to cart
+    cart.push(product);
+
+    // Save back to localStorage
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    // Redirect to cart page
+    window.location.href = 'cart.html';
+  });
+});
+
+
+   document.addEventListener("DOMContentLoaded", function () {
   let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
   const countSpan = document.getElementById("cart-count");
 
@@ -92,32 +115,32 @@ document.addEventListener("DOMContentLoaded", () => {
     countSpan.style.display = count > 0 ? "inline-block" : "none";
   }
 
-  // أول تحميل: نحدث الرقم
+  // أول تحميل: تحديث الرقم
   updateCartCount();
 
-  // زرار Add to cart
+  // لما المستخدم يضغط على زرار "Add to cart"
   document.querySelectorAll(".btn-cart").forEach(button => {
     button.addEventListener("click", function () {
-      const product = {
-        name: this.dataset.name,
-        price: this.dataset.price,
-        img: this.dataset.img
-      };
+      const name = this.dataset.name;
+      const price = this.dataset.price;
+      const img = this.dataset.img;
 
+      const product = { name, price, img };
       cartItems.push(product);
-      localStorage.setItem("cart", JSON.stringify(cartItems));
-      updateCartCount();
 
-      // Redirect أوتوماتيك لـ cart.html
-      window.location.href = "cart.html";
+      // تحديث localStorage
+      localStorage.setItem("cart", JSON.stringify(cartItems));
+
+      // تحديث الرقم فوق الأيقونة
+      updateCartCount();
     });
   });
+});
 
-  // ===============================
+// ===============================
   // Scroll Animation
   // ===============================
   const categories = document.querySelectorAll(".categories");
-
   categories.forEach(el => {
     el.style.opacity = "0";
     el.style.transform = "translateY(40px)";
@@ -138,4 +161,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.addEventListener("scroll", revealOnScroll);
   revealOnScroll();
-});
