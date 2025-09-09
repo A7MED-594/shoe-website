@@ -1,20 +1,19 @@
 document.addEventListener("DOMContentLoaded", () => {
   // ===============================
-  // Wishlist (القلب)
+  // Wishlist
   // ===============================
   const hearts = document.querySelectorAll(".product-icons .icon-circle svg");
   const navbarHeart = document.getElementById("navbar-heart");
   const heartCount = document.getElementById("heart-count");
   let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
 
-  updateNavbar();
+  updateWishlistNavbar();
 
   hearts.forEach((heart, index) => {
     heart.addEventListener("click", () => {
       const path = heart.querySelector("path");
-
-      // نجيب بيانات المنتج من الكارت نفسه
       const productCard = heart.closest(".product-card");
+
       const product = {
         id: `product-${index}`,
         name: productCard.querySelector(".product-title").textContent,
@@ -22,7 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
         image: productCard.querySelector("img").src
       };
 
-      // toggle
       if (path.getAttribute("fill") === "#B9985D") {
         path.setAttribute("fill", "none");
         path.setAttribute("stroke", "black");
@@ -36,11 +34,11 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       localStorage.setItem("wishlist", JSON.stringify(wishlist));
-      updateNavbar();
+      updateWishlistNavbar();
     });
   });
 
-  function updateNavbar() {
+  function updateWishlistNavbar() {
     const count = wishlist.length;
     if (count > 0) {
       navbarHeart.classList.remove("bi-heart");
@@ -57,45 +55,20 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ===============================
-  // Dropdown Menu
-  // ===============================
-  const menuBtn = document.getElementById("menuBtn");
-  const dropdown = document.getElementById("dropdownMenu");
-
-  menuBtn.addEventListener("click", () => {
-    if (dropdown.style.display === "block") {
-      dropdown.style.display = "none";
-      dropdown.setAttribute("aria-hidden", "true");
-    } else {
-      dropdown.style.display = "block";
-      dropdown.setAttribute("aria-hidden", "false");
-    }
-  });
-
-  document.addEventListener("click", (event) => {
-    if (!menuBtn.contains(event.target) && !dropdown.contains(event.target)) {
-      dropdown.style.display = "none";
-      dropdown.setAttribute("aria-hidden", "true");
-    }
-  });
-
-  // ===============================
   // Add to Cart
   // ===============================
-  let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
   const countSpan = document.getElementById("cart-count");
 
   function updateCartCount() {
     if (!countSpan) return;
-    const count = cartItems.length;
+    let cart = JSON.parse(localStorage.getItem("cart")) || []; // ← ناخد دايمًا من localStorage
+    const count = cart.length;
     countSpan.textContent = count;
     countSpan.style.display = count > 0 ? "inline-block" : "none";
   }
 
-  // أول تحميل: نحدث الرقم
-  updateCartCount();
+  updateCartCount(); // أول تحميل
 
-  // زرار Add to cart
   document.querySelectorAll(".btn-cart").forEach(button => {
     button.addEventListener("click", function () {
       const product = {
@@ -104,12 +77,13 @@ document.addEventListener("DOMContentLoaded", () => {
         img: this.dataset.img
       };
 
-      cartItems.push(product);
-      localStorage.setItem("cart", JSON.stringify(cartItems));
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart.push(product);
+      localStorage.setItem("cart", JSON.stringify(cart));
 
       updateCartCount();
 
-      // Redirect أوتوماتيك لـ cart.html
+      // أوتوماتيك يروح على صفحة الكارت
       window.location.href = "cart.html";
     });
   });

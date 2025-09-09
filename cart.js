@@ -3,13 +3,18 @@ document.addEventListener("DOMContentLoaded", function () {
   const container = document.getElementById("cart-items");
   const countSpan = document.getElementById("cart-count");
 
+  // ========================
+  // تحديث عداد الكارت
   function updateCartCount() {
     if (!countSpan) return;
-    const count = cartItems.length;
+    let cart = JSON.parse(localStorage.getItem("cart")) || []; // ← ناخد دايمًا من localStorage
+    const count = cart.length;
     countSpan.textContent = count;
     countSpan.style.display = count > 0 ? "inline-block" : "none";
   }
 
+  // ========================
+  // عرض الكارت
   function renderCart() {
     container.innerHTML = "";
 
@@ -44,14 +49,19 @@ document.addEventListener("DOMContentLoaded", function () {
     updateCartCount();
   }
 
+  // ========================
+  // حذف من الكارت
   container.addEventListener("click", function (e) {
     if (e.target.classList.contains("remove-btn")) {
       const index = parseInt(e.target.dataset.index);
       cartItems.splice(index, 1);
       localStorage.setItem("cart", JSON.stringify(cartItems));
       renderCart();
+      updateCartCount(); // ← مهم
     }
   });
 
+  // ========================
+  // أول تحميل
   renderCart();
 });
