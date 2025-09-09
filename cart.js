@@ -3,18 +3,19 @@ document.addEventListener("DOMContentLoaded", function () {
   const container = document.getElementById("cart-items");
   const countSpan = document.getElementById("cart-count");
 
-  // ✅ تحديث عداد الكارت في النافبار
+  // ========================
+  // تحديث عداد الكارت
   function updateCartCount() {
-    if (!countSpan) return;
-    const count = cartItems.length;
-    countSpan.textContent = count;
-    countSpan.style.display = count > 0 ? "inline-block" : "none";
+    if (countSpan) {
+      const count = cartItems.length;
+      countSpan.textContent = count;
+      countSpan.style.display = count > 0 ? "inline-block" : "none";
+    }
   }
 
-  // ✅ عرض عناصر الكارت
+  // ========================
+  // عرض محتوى الكارت
   function renderCart() {
-    if (!container) return; // لو مش في صفحة الكارت
-
     container.innerHTML = "";
 
     if (cartItems.length === 0) {
@@ -23,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    // تحديد ارتفاع الصورة حسب عدد المنتجات
+    // تحديد ارتفاع الصور بناءً على عدد المنتجات
     let imgHeight = 550;
     if (cartItems.length === 2) {
       imgHeight = 300;
@@ -57,35 +58,18 @@ document.addEventListener("DOMContentLoaded", function () {
     updateCartCount();
   }
 
-  // ✅ حذف عنصر من الكارت
-  if (container) {
-    container.addEventListener("click", function (e) {
-      if (e.target.classList.contains("remove-btn")) {
-        const index = parseInt(e.target.dataset.index);
-        cartItems.splice(index, 1);
-        localStorage.setItem("cart", JSON.stringify(cartItems));
-        renderCart();
-        updateCartCount();
-      }
-    });
-  }
-
-  // ✅ إضافة منتج للكارت (مثال لو عندك زرار Add to Cart)
-  document.body.addEventListener("click", function (e) {
-    if (e.target.classList.contains("add-to-cart")) {
-      const product = {
-        name: e.target.dataset.name,
-        price: e.target.dataset.price,
-        img: e.target.dataset.img,
-      };
-      cartItems.push(product);
+  // ========================
+  // حدث الحذف من الكارت
+  container.addEventListener("click", function (e) {
+    if (e.target.classList.contains("remove-btn")) {
+      const index = parseInt(e.target.dataset.index);
+      cartItems.splice(index, 1);
       localStorage.setItem("cart", JSON.stringify(cartItems));
       renderCart();
-      updateCartCount();
     }
   });
 
-  // ✅ أول تحميل
+  // ========================
+  // أول تحميل
   renderCart();
-  updateCartCount();
 });
