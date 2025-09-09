@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const container = document.getElementById("cart-items");
   const countSpan = document.getElementById("cart-count");
 
-  // تحديث عداد الكارت في النافبار
   function updateCartCount() {
     if (!countSpan) return;
     const count = cartItems.length;
@@ -11,7 +10,6 @@ document.addEventListener("DOMContentLoaded", function () {
     countSpan.style.display = count > 0 ? "inline-block" : "none";
   }
 
-  // عرض الكارت
   function renderCart() {
     container.innerHTML = "";
 
@@ -27,9 +25,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
       col.innerHTML = `
         <div class="card h-100 text-center shadow-sm">
-          <div class="card-img-container" 
-               style="height:200px; display:flex; align-items:center; justify-content:center; background:#f9f9f9;">
-            <img src="${item.img}" alt="${item.name}" 
+          <div class="card-img-container" style="height:200px; display:flex; align-items:center; justify-content:center; background:#f9f9f9;">
+            <img src="${item.img}" alt="${item.name}"
                  style="max-height:100%; max-width:100%; object-fit:contain;" />
           </div>
           <div class="card-body d-flex flex-column">
@@ -47,16 +44,14 @@ document.addEventListener("DOMContentLoaded", function () {
     updateCartCount();
   }
 
-  // حدث الحذف
   container.addEventListener("click", function (e) {
     if (e.target.classList.contains("remove-btn")) {
       const index = parseInt(e.target.dataset.index);
       cartItems.splice(index, 1);
       localStorage.setItem("cart", JSON.stringify(cartItems));
-      renderCart(); // هيحدث العداد والـ UI فورًا
+      renderCart();
     }
   });
 
-  // أول تحميل
   renderCart();
 });
