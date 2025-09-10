@@ -8,6 +8,30 @@ const maxSlide = Math.max(0, totalCards - cardsPerView);
 function updateCarousel() {
     const translateX = -currentSlide * (280 + 30); 
     track.style.transform = `translateX(${translateX}px)`;
+    updateButtonStates();
+}
+
+function updateButtonStates() {
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    
+    // Reset button classes
+    prevBtn.classList.remove('active', 'inactive');
+    nextBtn.classList.remove('active', 'inactive');
+    
+    if (currentSlide === 0) {
+        // At the beginning - next button is active, prev is inactive
+        nextBtn.classList.add('active');
+        prevBtn.classList.add('inactive');
+    } else if (currentSlide >= maxSlide) {
+        // At the end - prev button is active, next is inactive
+        prevBtn.classList.add('active');
+        nextBtn.classList.add('inactive');
+    } else {
+        // In the middle - both buttons are active
+        prevBtn.classList.add('active');
+        nextBtn.classList.add('active');
+    }
 }
 
 function nextSlide() {
@@ -81,7 +105,3 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
-
-window.onload = function () {
-    document.body.style.zoom = "80%";
-  };
