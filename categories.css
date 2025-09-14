@@ -218,7 +218,7 @@ body {
   color: #caa766;
 }
 
-/* Category Cards */
+/* Category Cards - Enhanced with Product-Style Animations */
 .category-card {
   background: none;
   /* يشيل الخلفية */
@@ -227,13 +227,15 @@ body {
   box-shadow: none;
   /* يشيل الظل */
   overflow: hidden;
-  transition: 0.3s ease;
+  transition: transform 0.3s ease;
+  /* Match product card timing */
   cursor: pointer;
   height: 100%;
 }
 
 .category-card:hover {
-  transform: translateY(-8px);
+  transform: scale(1.03);
+  /* Match product card scale effect */
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
@@ -247,48 +249,15 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: 0.5s ease;
+  transition: transform 0.5s ease;
+  /* Match product timing */
 }
 
 .category-card:hover .category-image img {
   transform: scale(1.1);
 }
 
-.category-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.7);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: 0.3s ease;
-}
-
-.category-card:hover .category-overlay {
-  opacity: 1;
-}
-
-.category-btn {
-  background: #C8860D;
-  border: none;
-  color: #FFFFFF;
-  padding: 0.5rem 1.5rem;
-  border-radius: 8px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  transition: 0.2s ease;
-}
-
-.category-btn:hover {
-  background: #A66F0A;
-  transform: translateY(-2px);
-}
-
-.category-overlay {
-  display: none !important;
-}
+/* Removed category-overlay and category-btn styles - no longer needed */
 
 .category-info {
   padding: 1.5rem;
@@ -296,7 +265,7 @@ body {
 }
 
 .category-title {
-  font-family:"Playfair Display";
+  font-family: "Playfair Display";
   font-size: 35px;
   font-weight: 700;
   color: #2C2C2C;
@@ -391,3 +360,92 @@ body {
   border: 4px solid #b48b4a;
   /* نفس لون الخلفية */
 }
+
+/* ===============================
+   Enhanced Animation Styles - Matching Product Style
+   =============================== */
+
+/* Enhanced Category Card Hover Effects */
+.category-card:hover {
+  box-shadow: 0 8px 32px rgba(185, 154, 62, 0.3);
+}
+
+/* Add Icon Circle Animation (for future use) */
+.category-icon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.category-card:hover .category-icon {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.category-icon:hover {
+  transform: scale(1.2);
+}
+
+/* Smooth scroll reveal animation */
+.categories-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease;
+}
+
+.categories-section.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===============================
+   Product Icons - Matching Product Screen Exactly
+   =============================== */
+
+.product-icons {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.category-card:hover .product-icons {
+  opacity: 1;
+}
+
+.icon-circle {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.icon-circle:hover {
+  transform: scale(1.2);
+  background: rgba(255, 255, 255, 1);
+}
+
+.icon-circle svg {
+  width: 20px;
+  height: 20px;
+}
+

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ShoeLuxe - Premium Footwear Collection</title>
     <link rel="stylesheet" href="categories.css">
+    <link rel="stylesheet" href="animatiom.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
@@ -22,10 +23,10 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 
- 
+
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
@@ -52,7 +53,7 @@
                 <div class="container">
                     <div class="navbar-content">
 
-                       <a class="navbar-brand fw-bold m-0" href="#">SHOE<span>LUXE</span></a>
+                        <a class="navbar-brand fw-bold m-0" href="#">SHOE<span>LUXE</span></a>
 
 
                         <div class="search-container">
@@ -136,11 +137,19 @@
                     <!-- Sneakers -->
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
                         <div class="category-card">
+                            <div class="product-icons">
+                                <div class="icon-circle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27"
+                                        fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M13.4995 6.66814C14.2651 5.7725 15.5897 4.76685 17.6066 4.76685C21.1347 4.76685 23.5005 8.07828 23.5005 11.1619C23.5005 17.6081 15.4752 22.5463 13.4995 22.5463C11.5238 22.5463 3.49854 17.6081 3.49854 11.1619C3.49854 8.07828 5.86432 4.76685 9.39244 4.76685C11.4093 4.76685 12.7339 5.7725 13.4995 6.66814Z"
+                                            stroke="black" stroke-width="1.46681" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
                             <div class="category-image">
                                 <img src="img/img5.jpg" alt="Sneakers" class="img-fluid">
-                                <div class="category-overlay">
-                                    <button class="btn btn-primary category-btn">View Collection</button>
-                                </div>
                             </div>
                             <div class="category-info">
                                 <h4 class="category-title">Sneakers</h4>
@@ -150,31 +159,45 @@
                     </div>
 
                     <!-- Formal Shoes -->
-<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-    <div class="category-card">
-        <div class="category-image">
-            <img src="img/img21.png" alt="Formal Shoes" class="img-fluid">
-            <div class="category-overlay">
-                <button class="btn btn-primary category-btn" data-target="single-product.html">
-                    View Collection
-                </button>
-            </div>
-        </div>
-        <div class="category-info">
-            <h4 class="category-title">Formal Shoes</h4>
-            <p class="category-count">250 product</p>
-        </div>
-    </div>
-</div>
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="category-card">
+                            <div class="product-icons">
+                                <div class="icon-circle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27"
+                                        fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M13.4995 6.66814C14.2651 5.7725 15.5897 4.76685 17.6066 4.76685C21.1347 4.76685 23.5005 8.07828 23.5005 11.1619C23.5005 17.6081 15.4752 22.5463 13.4995 22.5463C11.5238 22.5463 3.49854 17.6081 3.49854 11.1619C3.49854 8.07828 5.86432 4.76685 9.39244 4.76685C11.4093 4.76685 12.7339 5.7725 13.4995 6.66814Z"
+                                            stroke="black" stroke-width="1.46681" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="category-image">
+                                <img src="img/img21.png" alt="Formal Shoes" class="img-fluid">
+                            </div>
+                            <div class="category-info">
+                                <h4 class="category-title">Formal Shoes</h4>
+                                <p class="category-count">250 product</p>
+                            </div>
+                        </div>
+                    </div>
 
                     <!-- Casual Shoes -->
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
                         <div class="category-card">
+                            <div class="product-icons">
+                                <div class="icon-circle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27"
+                                        fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M13.4995 6.66814C14.2651 5.7725 15.5897 4.76685 17.6066 4.76685C21.1347 4.76685 23.5005 8.07828 23.5005 11.1619C23.5005 17.6081 15.4752 22.5463 13.4995 22.5463C11.5238 22.5463 3.49854 17.6081 3.49854 11.1619C3.49854 8.07828 5.86432 4.76685 9.39244 4.76685C11.4093 4.76685 12.7339 5.7725 13.4995 6.66814Z"
+                                            stroke="black" stroke-width="1.46681" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
                             <div class="category-image">
                                 <img src="img/img20.png" alt="Casual Shoes" class="img-fluid">
-                                <div class="category-overlay">
-                                    <button class="btn btn-primary category-btn">View Collection</button>
-                                </div>
                             </div>
                             <div class="category-info">
                                 <h4 class="category-title">Casual Shoes</h4>
@@ -186,11 +209,19 @@
                     <!-- Running Shoes -->
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
                         <div class="category-card">
+                            <div class="product-icons">
+                                <div class="icon-circle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27"
+                                        fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M13.4995 6.66814C14.2651 5.7725 15.5897 4.76685 17.6066 4.76685C21.1347 4.76685 23.5005 8.07828 23.5005 11.1619C23.5005 17.6081 15.4752 22.5463 13.4995 22.5463C11.5238 22.5463 3.49854 17.6081 3.49854 11.1619C3.49854 8.07828 5.86432 4.76685 9.39244 4.76685C11.4093 4.76685 12.7339 5.7725 13.4995 6.66814Z"
+                                            stroke="black" stroke-width="1.46681" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
                             <div class="category-image">
                                 <img src="img/img23.png" alt="Running Shoes" class="img-fluid">
-                                <div class="category-overlay">
-                                    <button class="btn btn-primary category-btn">View Collection</button>
-                                </div>
                             </div>
                             <div class="category-info">
                                 <h4 class="category-title">Running Shoes</h4>
@@ -202,11 +233,19 @@
                     <!-- Football Shoes -->
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
                         <div class="category-card">
+                            <div class="product-icons">
+                                <div class="icon-circle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27"
+                                        fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M13.4995 6.66814C14.2651 5.7725 15.5897 4.76685 17.6066 4.76685C21.1347 4.76685 23.5005 8.07828 23.5005 11.1619C23.5005 17.6081 15.4752 22.5463 13.4995 22.5463C11.5238 22.5463 3.49854 17.6081 3.49854 11.1619C3.49854 8.07828 5.86432 4.76685 9.39244 4.76685C11.4093 4.76685 12.7339 5.7725 13.4995 6.66814Z"
+                                            stroke="black" stroke-width="1.46681" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
                             <div class="category-image">
                                 <img src="img/img16.png" alt="Football Shoes" class="img-fluid">
-                                <div class="category-overlay">
-                                    <button class="btn btn-primary category-btn">View Collection</button>
-                                </div>
                             </div>
                             <div class="category-info">
                                 <h4 class="category-title">Football Shoes</h4>
@@ -218,11 +257,19 @@
                     <!-- Walking Shoes -->
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
                         <div class="category-card">
+                            <div class="product-icons">
+                                <div class="icon-circle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27"
+                                        fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M13.4995 6.66814C14.2651 5.7725 15.5897 4.76685 17.6066 4.76685C21.1347 4.76685 23.5005 8.07828 23.5005 11.1619C23.5005 17.6081 15.4752 22.5463 13.4995 22.5463C11.5238 22.5463 3.49854 17.6081 3.49854 11.1619C3.49854 8.07828 5.86432 4.76685 9.39244 4.76685C11.4093 4.76685 12.7339 5.7725 13.4995 6.66814Z"
+                                            stroke="black" stroke-width="1.46681" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
                             <div class="category-image">
                                 <img src="img/img19.jpg" alt="Walking Shoes" class="img-fluid">
-                                <div class="category-overlay">
-                                    <button class="btn btn-primary category-btn">View Collection</button>
-                                </div>
                             </div>
                             <div class="category-info">
                                 <h4 class="category-title">Walking Shoes</h4>
@@ -234,11 +281,19 @@
                     <!-- Heels & Pumps -->
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="700">
                         <div class="category-card">
+                            <div class="product-icons">
+                                <div class="icon-circle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27"
+                                        fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M13.4995 6.66814C14.2651 5.7725 15.5897 4.76685 17.6066 4.76685C21.1347 4.76685 23.5005 8.07828 23.5005 11.1619C23.5005 17.6081 15.4752 22.5463 13.4995 22.5463C11.5238 22.5463 3.49854 17.6081 3.49854 11.1619C3.49854 8.07828 5.86432 4.76685 9.39244 4.76685C11.4093 4.76685 12.7339 5.7725 13.4995 6.66814Z"
+                                            stroke="black" stroke-width="1.46681" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
                             <div class="category-image">
                                 <img src="img/img27.png" alt="Heels & Pumps" class="img-fluid">
-                                <div class="category-overlay">
-                                    <button class="btn btn-primary category-btn">View Collection</button>
-                                </div>
                             </div>
                             <div class="category-info">
                                 <h4 class="category-title">Heels & Pumps</h4>
@@ -250,11 +305,19 @@
                     <!-- Kids' Shoes -->
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="800">
                         <div class="category-card">
+                            <div class="product-icons">
+                                <div class="icon-circle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27"
+                                        fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M13.4995 6.66814C14.2651 5.7725 15.5897 4.76685 17.6066 4.76685C21.1347 4.76685 23.5005 8.07828 23.5005 11.1619C23.5005 17.6081 15.4752 22.5463 13.4995 22.5463C11.5238 22.5463 3.49854 17.6081 3.49854 11.1619C3.49854 8.07828 5.86432 4.76685 9.39244 4.76685C11.4093 4.76685 12.7339 5.7725 13.4995 6.66814Z"
+                                            stroke="black" stroke-width="1.46681" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
                             <div class="category-image">
                                 <img src="img/img26.png" alt="Kids' Shoes" class="img-fluid">
-                                <div class="category-overlay">
-                                    <button class="btn btn-primary category-btn">View Collection</button>
-                                </div>
                             </div>
                             <div class="category-info">
                                 <h4 class="category-title">Kids' Shoes</h4>
@@ -266,11 +329,19 @@
                     <!-- Beach & Sandals -->
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="900">
                         <div class="category-card">
+                            <div class="product-icons">
+                                <div class="icon-circle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27"
+                                        fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M13.4995 6.66814C14.2651 5.7725 15.5897 4.76685 17.6066 4.76685C21.1347 4.76685 23.5005 8.07828 23.5005 11.1619C23.5005 17.6081 15.4752 22.5463 13.4995 22.5463C11.5238 22.5463 3.49854 17.6081 3.49854 11.1619C3.49854 8.07828 5.86432 4.76685 9.39244 4.76685C11.4093 4.76685 12.7339 5.7725 13.4995 6.66814Z"
+                                            stroke="black" stroke-width="1.46681" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
                             <div class="category-image">
                                 <img src="img/img6.jpg" alt="Beach & Sandals" class="img-fluid">
-                                <div class="category-overlay">
-                                    <button class="btn btn-primary category-btn">View Collection</button>
-                                </div>
                             </div>
                             <div class="category-info">
                                 <h4 class="category-title">Beach & Sandals</h4>
@@ -282,11 +353,19 @@
                     <!-- Work & Safety Shoes -->
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="1000">
                         <div class="category-card">
+                            <div class="product-icons">
+                                <div class="icon-circle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27"
+                                        fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M13.4995 6.66814C14.2651 5.7725 15.5897 4.76685 17.6066 4.76685C21.1347 4.76685 23.5005 8.07828 23.5005 11.1619C23.5005 17.6081 15.4752 22.5463 13.4995 22.5463C11.5238 22.5463 3.49854 17.6081 3.49854 11.1619C3.49854 8.07828 5.86432 4.76685 9.39244 4.76685C11.4093 4.76685 12.7339 5.7725 13.4995 6.66814Z"
+                                            stroke="black" stroke-width="1.46681" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
                             <div class="category-image">
                                 <img src="img/img25.png" alt="Work & Safety Shoes" class="img-fluid">
-                                <div class="category-overlay">
-                                    <button class="btn btn-primary category-btn">View Collection</button>
-                                </div>
                             </div>
                             <div class="category-info">
                                 <h4 class="category-title">Work & Safety Shoes</h4>
@@ -298,11 +377,19 @@
                     <!-- Winter & Boots -->
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="1100">
                         <div class="category-card">
+                            <div class="product-icons">
+                                <div class="icon-circle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27"
+                                        fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M13.4995 6.66814C14.2651 5.7725 15.5897 4.76685 17.6066 4.76685C21.1347 4.76685 23.5005 8.07828 23.5005 11.1619C23.5005 17.6081 15.4752 22.5463 13.4995 22.5463C11.5238 22.5463 3.49854 17.6081 3.49854 11.1619C3.49854 8.07828 5.86432 4.76685 9.39244 4.76685C11.4093 4.76685 12.7339 5.7725 13.4995 6.66814Z"
+                                            stroke="black" stroke-width="1.46681" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
                             <div class="category-image">
                                 <img src="img/img24.png" alt="Winter & Boots" class="img-fluid">
-                                <div class="category-overlay">
-                                    <button class="btn btn-primary category-btn">View Collection</button>
-                                </div>
                             </div>
                             <div class="category-info">
                                 <h4 class="category-title">Winter & Boots</h4>
@@ -314,11 +401,19 @@
                     <!-- Orthopedic Shoes -->
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="1200">
                         <div class="category-card">
+                            <div class="product-icons">
+                                <div class="icon-circle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27"
+                                        fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M13.4995 6.66814C14.2651 5.7725 15.5897 4.76685 17.6066 4.76685C21.1347 4.76685 23.5005 8.07828 23.5005 11.1619C23.5005 17.6081 15.4752 22.5463 13.4995 22.5463C11.5238 22.5463 3.49854 17.6081 3.49854 11.1619C3.49854 8.07828 5.86432 4.76685 9.39244 4.76685C11.4093 4.76685 12.7339 5.7725 13.4995 6.66814Z"
+                                            stroke="black" stroke-width="1.46681" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
                             <div class="category-image">
                                 <img src="img/img14.jpg" alt="Orthopedic Shoes" class="img-fluid">
-                                <div class="category-overlay">
-                                    <button class="btn btn-primary category-btn">View Collection</button>
-                                </div>
                             </div>
                             <div class="category-info">
                                 <h4 class="category-title">Orthopedic Shoes</h4>
@@ -332,33 +427,41 @@
 
         <!-- CTA Section -->
         <section class="Shop-Now">
-        <div class="banner">
-    <div class="banner-text">
-      <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
-  <path d="M0.55475 13.7329L4.71528 12.5414C6.58887 12.012 8.29557 11.0096 9.67204 9.63019C11.0485 8.25073 12.0487 6.54034 12.5769 4.66269L13.7659 0.493151C13.8257 0.347273 13.9274 0.222502 14.0581 0.134693C14.1888 0.0468833 14.3426 0 14.5 0C14.6574 0 14.8112 0.0468833 14.9419 0.134693C15.0726 0.222502 15.1743 0.347273 15.2341 0.493151L16.4231 4.66269C16.9513 6.54034 17.9515 8.25073 19.328 9.63019C20.7044 11.0096 22.4111 12.012 24.2847 12.5414L28.4452 13.7329C28.605 13.7783 28.7456 13.8748 28.8457 14.0075C28.9458 14.1403 29 14.3022 29 14.4686C29 14.635 28.9458 14.7969 28.8457 14.9297C28.7456 15.0624 28.605 15.1589 28.4452 15.2043L24.2847 16.3958C22.4111 16.9252 20.7044 17.9276 19.328 19.307C17.9515 20.6865 16.9513 22.3969 16.4231 24.2745L15.2341 28.444C15.1888 28.6041 15.0926 28.7451 14.9601 28.8454C14.8276 28.9457 14.6661 29 14.5 29C14.3339 29 14.1724 28.9457 14.0399 28.8454C13.9074 28.7451 13.8112 28.6041 13.7659 28.444L12.5769 24.2745C12.0487 22.3969 11.0485 20.6865 9.67204 19.307C8.29557 17.9276 6.58887 16.9252 4.71528 16.3958L0.55475 15.2043C0.395 15.1589 0.2544 15.0624 0.154284 14.9297C0.0541668 14.7969 0 14.635 0 14.4686C0 14.3022 0.0541668 14.1403 0.154284 14.0075C0.2544 13.8748 0.395 13.7783 0.55475 13.7329Z" fill="#010F1C"/>
-</svg>
-      <h1>SHOP NOW AND UNLEASH<br> YOUR INNER GLOW! <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
-  <path d="M0.55475 13.7329L4.71528 12.5414C6.58887 12.012 8.29557 11.0096 9.67204 9.63019C11.0485 8.25073 12.0487 6.54034 12.5769 4.66269L13.7659 0.493151C13.8257 0.347273 13.9274 0.222502 14.0581 0.134693C14.1888 0.0468833 14.3426 0 14.5 0C14.6574 0 14.8112 0.0468833 14.9419 0.134693C15.0726 0.222502 15.1743 0.347273 15.2341 0.493151L16.4231 4.66269C16.9513 6.54034 17.9515 8.25073 19.328 9.63019C20.7044 11.0096 22.4111 12.012 24.2847 12.5414L28.4452 13.7329C28.605 13.7783 28.7456 13.8748 28.8457 14.0075C28.9458 14.1403 29 14.3022 29 14.4686C29 14.635 28.9458 14.7969 28.8457 14.9297C28.7456 15.0624 28.605 15.1589 28.4452 15.2043L24.2847 16.3958C22.4111 16.9252 20.7044 17.9276 19.328 19.307C17.9515 20.6865 16.9513 22.3969 16.4231 24.2745L15.2341 28.444C15.1888 28.6041 15.0926 28.7451 14.9601 28.8454C14.8276 28.9457 14.6661 29 14.5 29C14.3339 29 14.1724 28.9457 14.0399 28.8454C13.9074 28.7451 13.8112 28.6041 13.7659 28.444L12.5769 24.2745C12.0487 22.3969 11.0485 20.6865 9.67204 19.307C8.29557 17.9276 6.58887 16.9252 4.71528 16.3958L0.55475 15.2043C0.395 15.1589 0.2544 15.0624 0.154284 14.9297C0.0541668 14.7969 0 14.635 0 14.4686C0 14.3022 0.0541668 14.1403 0.154284 14.0075C0.2544 13.8748 0.395 13.7783 0.55475 13.7329Z" fill="#010F1C"/>
-</svg></h1>
-      <button class="shop-button">
-        <a href="./categories.html">
-        Shop Now
-        
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-  <path d="M14.125 5.875L5.875 14.125" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M8.3335 5.8335L14.1252 5.87433L14.1668 11.6668" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-      </a>
-      </button>
-    </div>
-    <div class="banner-image">
-      <img src="img/img15.png" alt="Shoes">
-    </div>
-  </div>
-      </section>
+            <div class="banner">
+                <div class="banner-text">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
+                        <path
+                            d="M0.55475 13.7329L4.71528 12.5414C6.58887 12.012 8.29557 11.0096 9.67204 9.63019C11.0485 8.25073 12.0487 6.54034 12.5769 4.66269L13.7659 0.493151C13.8257 0.347273 13.9274 0.222502 14.0581 0.134693C14.1888 0.0468833 14.3426 0 14.5 0C14.6574 0 14.8112 0.0468833 14.9419 0.134693C15.0726 0.222502 15.1743 0.347273 15.2341 0.493151L16.4231 4.66269C16.9513 6.54034 17.9515 8.25073 19.328 9.63019C20.7044 11.0096 22.4111 12.012 24.2847 12.5414L28.4452 13.7329C28.605 13.7783 28.7456 13.8748 28.8457 14.0075C28.9458 14.1403 29 14.3022 29 14.4686C29 14.635 28.9458 14.7969 28.8457 14.9297C28.7456 15.0624 28.605 15.1589 28.4452 15.2043L24.2847 16.3958C22.4111 16.9252 20.7044 17.9276 19.328 19.307C17.9515 20.6865 16.9513 22.3969 16.4231 24.2745L15.2341 28.444C15.1888 28.6041 15.0926 28.7451 14.9601 28.8454C14.8276 28.9457 14.6661 29 14.5 29C14.3339 29 14.1724 28.9457 14.0399 28.8454C13.9074 28.7451 13.8112 28.6041 13.7659 28.444L12.5769 24.2745C12.0487 22.3969 11.0485 20.6865 9.67204 19.307C8.29557 17.9276 6.58887 16.9252 4.71528 16.3958L0.55475 15.2043C0.395 15.1589 0.2544 15.0624 0.154284 14.9297C0.0541668 14.7969 0 14.635 0 14.4686C0 14.3022 0.0541668 14.1403 0.154284 14.0075C0.2544 13.8748 0.395 13.7783 0.55475 13.7329Z"
+                            fill="#010F1C" />
+                    </svg>
+                    <h1>SHOP NOW AND UNLEASH<br> YOUR INNER GLOW! <svg xmlns="http://www.w3.org/2000/svg" width="29"
+                            height="29" viewBox="0 0 29 29" fill="none">
+                            <path
+                                d="M0.55475 13.7329L4.71528 12.5414C6.58887 12.012 8.29557 11.0096 9.67204 9.63019C11.0485 8.25073 12.0487 6.54034 12.5769 4.66269L13.7659 0.493151C13.8257 0.347273 13.9274 0.222502 14.0581 0.134693C14.1888 0.0468833 14.3426 0 14.5 0C14.6574 0 14.8112 0.0468833 14.9419 0.134693C15.0726 0.222502 15.1743 0.347273 15.2341 0.493151L16.4231 4.66269C16.9513 6.54034 17.9515 8.25073 19.328 9.63019C20.7044 11.0096 22.4111 12.012 24.2847 12.5414L28.4452 13.7329C28.605 13.7783 28.7456 13.8748 28.8457 14.0075C28.9458 14.1403 29 14.3022 29 14.4686C29 14.635 28.9458 14.7969 28.8457 14.9297C28.7456 15.0624 28.605 15.1589 28.4452 15.2043L24.2847 16.3958C22.4111 16.9252 20.7044 17.9276 19.328 19.307C17.9515 20.6865 16.9513 22.3969 16.4231 24.2745L15.2341 28.444C15.1888 28.6041 15.0926 28.7451 14.9601 28.8454C14.8276 28.9457 14.6661 29 14.5 29C14.3339 29 14.1724 28.9457 14.0399 28.8454C13.9074 28.7451 13.8112 28.6041 13.7659 28.444L12.5769 24.2745C12.0487 22.3969 11.0485 20.6865 9.67204 19.307C8.29557 17.9276 6.58887 16.9252 4.71528 16.3958L0.55475 15.2043C0.395 15.1589 0.2544 15.0624 0.154284 14.9297C0.0541668 14.7969 0 14.635 0 14.4686C0 14.3022 0.0541668 14.1403 0.154284 14.0075C0.2544 13.8748 0.395 13.7783 0.55475 13.7329Z"
+                                fill="#010F1C" />
+                        </svg></h1>
+                    <button class="shop-button">
+                        <a href="./categories.html">
+                            Shop Now
 
-    <!-- Footer -->
-<footer class="footer-section">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                fill="none">
+                                <path d="M14.125 5.875L5.875 14.125" stroke="white" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M8.3335 5.8335L14.1252 5.87433L14.1668 11.6668" stroke="white"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </button>
+                </div>
+                <div class="banner-image">
+                    <img src="img/img15.png" alt="Shoes">
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer-section">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
@@ -395,26 +498,26 @@
             </div>
         </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- AOS Animation JS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <!-- AOS Animation JS -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <!-- Custom JS -->
-    <script src="main.js"></script>
+        <!-- Custom JS -->
+        <script src="main.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
-        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
-        crossorigin="anonymous"></script>
-    <script src="categories.js"></script>
-      
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+            integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+            crossorigin="anonymous"></script>
+        <script src="categories.js"></script>
+
 </body>
 
 </html>
