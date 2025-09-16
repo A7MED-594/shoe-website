@@ -89,7 +89,7 @@ categoryCards.forEach(card => {
     card.addEventListener('click', function() {
         const categoryTitle = this.querySelector('.category-title').textContent;
         console.log('Clicked category:', categoryTitle);
-        window.location.href = 'single-product.html';
+        window.location.href = 'single_product.html';
     });
 });
 
