@@ -2,525 +2,331 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShoeLuxe - Premium Footwear Collection</title>
-    <link rel="stylesheet" href="categories.css">
-    <link rel="stylesheet" href="animatiom.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShoeLuxe - Premium Footwear Collection</title>
 
+  <!-- CSS -->
+  <link rel="stylesheet" href="categories.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="navbar-styles.css">
 
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Bootstrap 5.3 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-
-    <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-
-
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
-
-    <link rel="shortcut icon" href="./favicon/favicon.ico" type="image/x-icon">
-
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <!-- Header -->
-    <!DOCTYPE html>
-    <html lang="en">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+    <div class="container-fluid ">
+      <div class="header-section w-100 py-3">
+        <div class="d-flex align-items-center justify-content-between mb-3">
+          <div class="logo-section">
+            <a class="navbar-brand" href="#">
+              <span class="logo-text">
+                <span class="shoe-text">SHOE</span><span class="luxe-text">LUXE</span>
+              </span>
+            </a>
+          </div>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>ShoeLuxe Navbar</title>
-        <link rel="stylesheet" href="navbar-styles.css">
+          <div class="search-section d-none d-md-block">
+            <div class="search-container">
+              <div class="search-bar">
+                <i class="bi bi-search search-icon"></i>
+                <input type="text" class="search-input" placeholder="Search">
+              </div>
+            </div>
+          </div>
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    </head>
-
-    <body>
-        <div class="navbar-container">
-
-            <div class="top-navbar">
-                <div class="container">
-                    <div class="navbar-content">
-
-                        <a class="navbar-brand fw-bold m-0" href="#">SHOE<span>LUXE</span></a>
-
-
-                        <div class="search-container">
-                            <div class="search-wrapper">
-                                <i class="fas fa-search search-icon"></i>
-                                <input type="text" placeholder="Search" class="search-input">
-                            </div>
-                        </div>
-
-
-                        <div class="user-actions">
-                            <button class="action-btn">
-                                <i class="far fa-heart"></i>
-                            </button>
-                            <button class="action-btn">
-                                <i class="fas fa-shopping-bag"></i>
-                            </button>
-                            <div class="user-profile">
-                                <img src="img/img8.jpg" alt="User" class="user-avatar">
-                                <span class="user-name">Mahmoud Dirar</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+          <div class="profile-section d-flex align-items-center">
+            <div class="nav-icons d-none d-md-flex">
+              <a href="./wishlist.html" class="nav-icon position-relative">
+                <img src="shoes web_icon/heart.svg" alt="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                  <path
+                    d="M21.3401 4.61012C20.8294 4.09912 20.2229 3.69376 19.5555 3.4172C18.888 3.14064 18.1726 2.99829 17.4501 2.99829C16.7276 2.99829 16.0122 3.14064 15.3448 3.4172C14.6773 3.69376 14.0709 4.09912 13.5601 4.61012L12.5001 5.67012L11.4401 4.61012C10.4084 3.57842 9.00915 2.99883 7.55012 2.99883C6.09109 2.99883 4.69181 3.57842 3.66012 4.61012C2.62843 5.64181 2.04883 7.04108 2.04883 8.50012C2.04883 9.95915 2.62843 11.3584 3.66012 12.3901L4.72012 13.4501L12.5001 21.2301L20.2801 13.4501L21.3401 12.3901C21.8511 11.8794 22.2565 11.2729 22.533 10.6055C22.8096 9.93801 22.9519 9.2226 22.9519 8.50012C22.9519 7.77763 22.8096 7.06222 22.533 6.39476C22.2565 5.7273 21.8511 5.12087 21.3401 4.61012Z"
+                    stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+              <a href="cart.html" class="nav-icon">
+                <i class="fas fa-shopping-bag"></i>
+              </a>
             </div>
 
+            <div class="divider d-none d-md-block"></div>
 
-            <div class="main-navigation">
-                <div class="container">
-                    <nav class="nav-menu">
-                        <ul class="nav-list">
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">HOME</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">PRODUCT</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link active">CATEGORIES</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">MEN</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">WOMEN</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">KIDS</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">SPORT</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">NEW</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">SALE</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
+            <div class="user-profile d-none d-md-flex">
+              <img src="img/img8.jpg" alt="User Avatar" class="user-avatar">
+
+              <span class="username">Mahmoud Draz</span>
             </div>
+
+            <button class="navbar-toggler d-md-none" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarNav">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
         </div>
-    </body>
 
-    </html>
-
-    <!-- Main Content -->
-    <main>
-        <!-- Categories Section -->
-        <section class="categories-section py-5">
-            <div class="container">
-                <!-- Section Header -->
-                <div class="text-center mb-5" data-aos="fade-up">
-                    <p class="section-subtitle">LATEST PRODUCT</p>
-                    <h2 class="section-title">OUR <span class="title-accent">CATEGORIES</span></h2>
-                </div>
-
-                <!-- Categories Grid -->
-                <div class="row g-4">
-                    <!-- Sneakers -->
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                        <div class="category-card">
-                            <div class="product-icons">
-                                <div class="icon-circle">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27"
-                                        fill="none">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M13.4995 6.66814C14.2651 5.7725 15.5897 4.76685 17.6066 4.76685C21.1347 4.76685 23.5005 8.07828 23.5005 11.1619C23.5005 17.6081 15.4752 22.5463 13.4995 22.5463C11.5238 22.5463 3.49854 17.6081 3.49854 11.1619C3.49854 8.07828 5.86432 4.76685 9.39244 4.76685C11.4093 4.76685 12.7339 5.7725 13.4995 6.66814Z"
-                                            stroke="black" stroke-width="1.46681" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="category-image">
-                                <img src="img/img5.jpg" alt="Sneakers" class="img-fluid">
-                            </div>
-                            <div class="category-info">
-                                <h4 class="category-title">Sneakers</h4>
-                                <p class="category-count">250 product</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Formal Shoes -->
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                        <div class="category-card">
-                            <div class="product-icons">
-                                <div class="icon-circle">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27"
-                                        fill="none">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M13.4995 6.66814C14.2651 5.7725 15.5897 4.76685 17.6066 4.76685C21.1347 4.76685 23.5005 8.07828 23.5005 11.1619C23.5005 17.6081 15.4752 22.5463 13.4995 22.5463C11.5238 22.5463 3.49854 17.6081 3.49854 11.1619C3.49854 8.07828 5.86432 4.76685 9.39244 4.76685C11.4093 4.76685 12.7339 5.7725 13.4995 6.66814Z"
-                                            stroke="black" stroke-width="1.46681" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="category-image">
-                                <img src="img/img21.png" alt="Formal Shoes" class="img-fluid">
-                            </div>
-                            <div class="category-info">
-                                <h4 class="category-title">Formal Shoes</h4>
-                                <p class="category-count">250 product</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Casual Shoes -->
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                        <div class="category-card">
-                            <div class="product-icons">
-                                <div class="icon-circle">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27"
-                                        fill="none">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M13.4995 6.66814C14.2651 5.7725 15.5897 4.76685 17.6066 4.76685C21.1347 4.76685 23.5005 8.07828 23.5005 11.1619C23.5005 17.6081 15.4752 22.5463 13.4995 22.5463C11.5238 22.5463 3.49854 17.6081 3.49854 11.1619C3.49854 8.07828 5.86432 4.76685 9.39244 4.76685C11.4093 4.76685 12.7339 5.7725 13.4995 6.66814Z"
-                                            stroke="black" stroke-width="1.46681" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="category-image">
-                                <img src="img/img20.png" alt="Casual Shoes" class="img-fluid">
-                            </div>
-                            <div class="category-info">
-                                <h4 class="category-title">Casual Shoes</h4>
-                                <p class="category-count">250 product</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Running Shoes -->
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-                        <div class="category-card">
-                            <div class="product-icons">
-                                <div class="icon-circle">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27"
-                                        fill="none">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M13.4995 6.66814C14.2651 5.7725 15.5897 4.76685 17.6066 4.76685C21.1347 4.76685 23.5005 8.07828 23.5005 11.1619C23.5005 17.6081 15.4752 22.5463 13.4995 22.5463C11.5238 22.5463 3.49854 17.6081 3.49854 11.1619C3.49854 8.07828 5.86432 4.76685 9.39244 4.76685C11.4093 4.76685 12.7339 5.7725 13.4995 6.66814Z"
-                                            stroke="black" stroke-width="1.46681" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="category-image">
-                                <img src="img/img23.png" alt="Running Shoes" class="img-fluid">
-                            </div>
-                            <div class="category-info">
-                                <h4 class="category-title">Running Shoes</h4>
-                                <p class="category-count">250 product</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Football Shoes -->
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-                        <div class="category-card">
-                            <div class="product-icons">
-                                <div class="icon-circle">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27"
-                                        fill="none">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M13.4995 6.66814C14.2651 5.7725 15.5897 4.76685 17.6066 4.76685C21.1347 4.76685 23.5005 8.07828 23.5005 11.1619C23.5005 17.6081 15.4752 22.5463 13.4995 22.5463C11.5238 22.5463 3.49854 17.6081 3.49854 11.1619C3.49854 8.07828 5.86432 4.76685 9.39244 4.76685C11.4093 4.76685 12.7339 5.7725 13.4995 6.66814Z"
-                                            stroke="black" stroke-width="1.46681" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="category-image">
-                                <img src="img/img16.png" alt="Football Shoes" class="img-fluid">
-                            </div>
-                            <div class="category-info">
-                                <h4 class="category-title">Football Shoes</h4>
-                                <p class="category-count">250 product</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Walking Shoes -->
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-                        <div class="category-card">
-                            <div class="product-icons">
-                                <div class="icon-circle">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27"
-                                        fill="none">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M13.4995 6.66814C14.2651 5.7725 15.5897 4.76685 17.6066 4.76685C21.1347 4.76685 23.5005 8.07828 23.5005 11.1619C23.5005 17.6081 15.4752 22.5463 13.4995 22.5463C11.5238 22.5463 3.49854 17.6081 3.49854 11.1619C3.49854 8.07828 5.86432 4.76685 9.39244 4.76685C11.4093 4.76685 12.7339 5.7725 13.4995 6.66814Z"
-                                            stroke="black" stroke-width="1.46681" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="category-image">
-                                <img src="img/img19.jpg" alt="Walking Shoes" class="img-fluid">
-                            </div>
-                            <div class="category-info">
-                                <h4 class="category-title">Walking Shoes</h4>
-                                <p class="category-count">250 product</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Heels & Pumps -->
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="700">
-                        <div class="category-card">
-                            <div class="product-icons">
-                                <div class="icon-circle">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27"
-                                        fill="none">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M13.4995 6.66814C14.2651 5.7725 15.5897 4.76685 17.6066 4.76685C21.1347 4.76685 23.5005 8.07828 23.5005 11.1619C23.5005 17.6081 15.4752 22.5463 13.4995 22.5463C11.5238 22.5463 3.49854 17.6081 3.49854 11.1619C3.49854 8.07828 5.86432 4.76685 9.39244 4.76685C11.4093 4.76685 12.7339 5.7725 13.4995 6.66814Z"
-                                            stroke="black" stroke-width="1.46681" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="category-image">
-                                <img src="img/img27.png" alt="Heels & Pumps" class="img-fluid">
-                            </div>
-                            <div class="category-info">
-                                <h4 class="category-title">Heels & Pumps</h4>
-                                <p class="category-count">250 product</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Kids' Shoes -->
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="800">
-                        <div class="category-card">
-                            <div class="product-icons">
-                                <div class="icon-circle">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27"
-                                        fill="none">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M13.4995 6.66814C14.2651 5.7725 15.5897 4.76685 17.6066 4.76685C21.1347 4.76685 23.5005 8.07828 23.5005 11.1619C23.5005 17.6081 15.4752 22.5463 13.4995 22.5463C11.5238 22.5463 3.49854 17.6081 3.49854 11.1619C3.49854 8.07828 5.86432 4.76685 9.39244 4.76685C11.4093 4.76685 12.7339 5.7725 13.4995 6.66814Z"
-                                            stroke="black" stroke-width="1.46681" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="category-image">
-                                <img src="img/img26.png" alt="Kids' Shoes" class="img-fluid">
-                            </div>
-                            <div class="category-info">
-                                <h4 class="category-title">Kids' Shoes</h4>
-                                <p class="category-count">250 product</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Beach & Sandals -->
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="900">
-                        <div class="category-card">
-                            <div class="product-icons">
-                                <div class="icon-circle">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27"
-                                        fill="none">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M13.4995 6.66814C14.2651 5.7725 15.5897 4.76685 17.6066 4.76685C21.1347 4.76685 23.5005 8.07828 23.5005 11.1619C23.5005 17.6081 15.4752 22.5463 13.4995 22.5463C11.5238 22.5463 3.49854 17.6081 3.49854 11.1619C3.49854 8.07828 5.86432 4.76685 9.39244 4.76685C11.4093 4.76685 12.7339 5.7725 13.4995 6.66814Z"
-                                            stroke="black" stroke-width="1.46681" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="category-image">
-                                <img src="img/img6.jpg" alt="Beach & Sandals" class="img-fluid">
-                            </div>
-                            <div class="category-info">
-                                <h4 class="category-title">Beach & Sandals</h4>
-                                <p class="category-count">250 product</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Work & Safety Shoes -->
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="1000">
-                        <div class="category-card">
-                            <div class="product-icons">
-                                <div class="icon-circle">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27"
-                                        fill="none">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M13.4995 6.66814C14.2651 5.7725 15.5897 4.76685 17.6066 4.76685C21.1347 4.76685 23.5005 8.07828 23.5005 11.1619C23.5005 17.6081 15.4752 22.5463 13.4995 22.5463C11.5238 22.5463 3.49854 17.6081 3.49854 11.1619C3.49854 8.07828 5.86432 4.76685 9.39244 4.76685C11.4093 4.76685 12.7339 5.7725 13.4995 6.66814Z"
-                                            stroke="black" stroke-width="1.46681" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="category-image">
-                                <img src="img/img25.png" alt="Work & Safety Shoes" class="img-fluid">
-                            </div>
-                            <div class="category-info">
-                                <h4 class="category-title">Work & Safety Shoes</h4>
-                                <p class="category-count">250 product</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Winter & Boots -->
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="1100">
-                        <div class="category-card">
-                            <div class="product-icons">
-                                <div class="icon-circle">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27"
-                                        fill="none">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M13.4995 6.66814C14.2651 5.7725 15.5897 4.76685 17.6066 4.76685C21.1347 4.76685 23.5005 8.07828 23.5005 11.1619C23.5005 17.6081 15.4752 22.5463 13.4995 22.5463C11.5238 22.5463 3.49854 17.6081 3.49854 11.1619C3.49854 8.07828 5.86432 4.76685 9.39244 4.76685C11.4093 4.76685 12.7339 5.7725 13.4995 6.66814Z"
-                                            stroke="black" stroke-width="1.46681" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="category-image">
-                                <img src="img/img24.png" alt="Winter & Boots" class="img-fluid">
-                            </div>
-                            <div class="category-info">
-                                <h4 class="category-title">Winter & Boots</h4>
-                                <p class="category-count">250 product</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Orthopedic Shoes -->
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="1200">
-                        <div class="category-card">
-                            <div class="product-icons">
-                                <div class="icon-circle">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27"
-                                        fill="none">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M13.4995 6.66814C14.2651 5.7725 15.5897 4.76685 17.6066 4.76685C21.1347 4.76685 23.5005 8.07828 23.5005 11.1619C23.5005 17.6081 15.4752 22.5463 13.4995 22.5463C11.5238 22.5463 3.49854 17.6081 3.49854 11.1619C3.49854 8.07828 5.86432 4.76685 9.39244 4.76685C11.4093 4.76685 12.7339 5.7725 13.4995 6.66814Z"
-                                            stroke="black" stroke-width="1.46681" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="category-image">
-                                <img src="img/img14.jpg" alt="Orthopedic Shoes" class="img-fluid">
-                            </div>
-                            <div class="category-info">
-                                <h4 class="category-title">Orthopedic Shoes</h4>
-                                <p class="category-count">250 product</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="mobile-search d-md-none mb-3">
+            <div class="search-bar">
+              <i class="bi bi-search search-icon"></i>
+              <input type="text" class="search-input" placeholder="Search">
             </div>
-        </section>
+          </div>
 
-        <!-- CTA Section -->
-        <section class="Shop-Now">
-            <div class="banner">
-                <div class="banner-text">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
-                        <path
-                            d="M0.55475 13.7329L4.71528 12.5414C6.58887 12.012 8.29557 11.0096 9.67204 9.63019C11.0485 8.25073 12.0487 6.54034 12.5769 4.66269L13.7659 0.493151C13.8257 0.347273 13.9274 0.222502 14.0581 0.134693C14.1888 0.0468833 14.3426 0 14.5 0C14.6574 0 14.8112 0.0468833 14.9419 0.134693C15.0726 0.222502 15.1743 0.347273 15.2341 0.493151L16.4231 4.66269C16.9513 6.54034 17.9515 8.25073 19.328 9.63019C20.7044 11.0096 22.4111 12.012 24.2847 12.5414L28.4452 13.7329C28.605 13.7783 28.7456 13.8748 28.8457 14.0075C28.9458 14.1403 29 14.3022 29 14.4686C29 14.635 28.9458 14.7969 28.8457 14.9297C28.7456 15.0624 28.605 15.1589 28.4452 15.2043L24.2847 16.3958C22.4111 16.9252 20.7044 17.9276 19.328 19.307C17.9515 20.6865 16.9513 22.3969 16.4231 24.2745L15.2341 28.444C15.1888 28.6041 15.0926 28.7451 14.9601 28.8454C14.8276 28.9457 14.6661 29 14.5 29C14.3339 29 14.1724 28.9457 14.0399 28.8454C13.9074 28.7451 13.8112 28.6041 13.7659 28.444L12.5769 24.2745C12.0487 22.3969 11.0485 20.6865 9.67204 19.307C8.29557 17.9276 6.58887 16.9252 4.71528 16.3958L0.55475 15.2043C0.395 15.1589 0.2544 15.0624 0.154284 14.9297C0.0541668 14.7969 0 14.635 0 14.4686C0 14.3022 0.0541668 14.1403 0.154284 14.0075C0.2544 13.8748 0.395 13.7783 0.55475 13.7329Z"
-                            fill="#010F1C" />
-                    </svg>
-                    <h1>SHOP NOW AND UNLEASH<br> YOUR INNER GLOW! <svg xmlns="http://www.w3.org/2000/svg" width="29"
-                            height="29" viewBox="0 0 29 29" fill="none">
-                            <path
-                                d="M0.55475 13.7329L4.71528 12.5414C6.58887 12.012 8.29557 11.0096 9.67204 9.63019C11.0485 8.25073 12.0487 6.54034 12.5769 4.66269L13.7659 0.493151C13.8257 0.347273 13.9274 0.222502 14.0581 0.134693C14.1888 0.0468833 14.3426 0 14.5 0C14.6574 0 14.8112 0.0468833 14.9419 0.134693C15.0726 0.222502 15.1743 0.347273 15.2341 0.493151L16.4231 4.66269C16.9513 6.54034 17.9515 8.25073 19.328 9.63019C20.7044 11.0096 22.4111 12.012 24.2847 12.5414L28.4452 13.7329C28.605 13.7783 28.7456 13.8748 28.8457 14.0075C28.9458 14.1403 29 14.3022 29 14.4686C29 14.635 28.9458 14.7969 28.8457 14.9297C28.7456 15.0624 28.605 15.1589 28.4452 15.2043L24.2847 16.3958C22.4111 16.9252 20.7044 17.9276 19.328 19.307C17.9515 20.6865 16.9513 22.3969 16.4231 24.2745L15.2341 28.444C15.1888 28.6041 15.0926 28.7451 14.9601 28.8454C14.8276 28.9457 14.6661 29 14.5 29C14.3339 29 14.1724 28.9457 14.0399 28.8454C13.9074 28.7451 13.8112 28.6041 13.7659 28.444L12.5769 24.2745C12.0487 22.3969 11.0485 20.6865 9.67204 19.307C8.29557 17.9276 6.58887 16.9252 4.71528 16.3958L0.55475 15.2043C0.395 15.1589 0.2544 15.0624 0.154284 14.9297C0.0541668 14.7969 0 14.635 0 14.4686C0 14.3022 0.0541668 14.1403 0.154284 14.0075C0.2544 13.8748 0.395 13.7783 0.55475 13.7329Z"
-                                fill="#010F1C" />
-                        </svg></h1>
-                    <button class="shop-button">
-                        <a href="./categories.html">
-                            Shop Now
+          <ul class="navbar-nav nav-menu">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="product.html">Product</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="categories.html">Categories</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Men</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Women</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Kids</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sport</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">New</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sale</a>
+            </li>
+          </ul>
 
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
-                                fill="none">
-                                <path d="M14.125 5.875L5.875 14.125" stroke="white" stroke-width="1.5"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M8.3335 5.8335L14.1252 5.87433L14.1668 11.6668" stroke="white"
-                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </a>
-                    </button>
-                </div>
-                <div class="banner-image">
-                    <img src="img/img15.png" alt="Shoes">
-                </div>
+          <div class="mobile-profile d-md-none mt-3 pt-3 border-top">
+            <div class="d-flex align-items-center mb-3">
+              <img src="img/source/person.jpg" alt="profile">
+
+              <span class="username">Mahmoud Draz</span>
             </div>
-        </section>
+            <div class="mobile-icons">
+              <a href="#" class="nav-icon me-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                  <path
+                    d="M21.3401 4.61012C20.8294 4.09912 20.2229 3.69376 19.5555 3.4172C18.888 3.14064 18.1726 2.99829 17.4501 2.99829C16.7276 2.99829 16.0122 3.14064 15.3448 3.4172C14.6773 3.69376 14.0709 4.09912 13.5601 4.61012L12.5001 5.67012L11.4401 4.61012C10.4084 3.57842 9.00915 2.99883 7.55012 2.99883C6.09109 2.99883 4.69181 3.57842 3.66012 4.61012C2.62843 5.64181 2.04883 7.04108 2.04883 8.50012C2.04883 9.95915 2.62843 11.3584 3.66012 12.3901L4.72012 13.4501L12.5001 21.2301L20.2801 13.4501L21.3401 12.3901C21.8511 11.8794 22.2565 11.2729 22.533 10.6055C22.8096 9.93801 22.9519 9.2226 22.9519 8.50012C22.9519 7.77763 22.8096 7.06222 22.533 6.39476C22.2565 5.7273 21.8511 5.12087 21.3401 4.61012Z"
+                    stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg> Wishlist
+              </a>
+              <a href="cart.html" class="nav-icon">
+                <i class="bi bi-bag"></i> Cart
 
-        <!-- Footer -->
-        <footer class="footer-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="footer-cta">
-                            <h2 class="footer-title">Are You Interested</h2>
-                            <a href="product.html" class="shopping-now-link">Shopping Now</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="footer-content">
-                            <h3 class="footer-brand">Shoes<span>luxe</span></h3>
-                            <nav class="footer-nav">
-                                <ul class="footer-links">
-                                    <li><a href="#">Shop</a></li>
-                                    <li><a href="#">About</a></li>
-                                    <li><a href="#">Blog</a></li>
-                                    <li><a href="#">Contact</a></li>
-                                </ul>
-                            </nav>
-                            <div class="footer-social">
-                                <a href="#" class="social-link twitter">
-                                    <i class="bi bi-twitter"></i>
-                                </a>
-                                <a href="#" class="social-link instagram">
-                                    <i class="bi bi-instagram"></i>
-                                </a>
-                                <a href="#" class="social-link facebook">
-                                    <i class="bi bi-facebook"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </a>
             </div>
-        </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
 
-        <!-- Bootstrap JS -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Main Content -->
+  <main>
+    <section class="categories-section py-5">
+      <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <p class="section-subtitle">LATEST PRODUCT</p>
+          <h2 class="section-title">OUR <span class="title-accent">CATEGORIES</span></h2>
+        </div>
 
-        <!-- AOS Animation JS -->
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <div class="row g-4">
+          <!-- Category 1 -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="category-card">
+              <div class="category-image">
+                <img src="img/img5.jpg" alt="Sneakers" class="img-fluid">
+                <div class="category-overlay">
+                  <a href="product.html" class="btn btn-primary category-btn">View Collection</a>
+                </div>
+              </div>
+              <div class="category-info">
+                <h4 class="category-title">Sneakers</h4>
+                <p class="category-count">250 product</p>
+              </div>
+            </div>
+          </div>
 
-        <!-- Custom JS -->
-        <script src="main.js"></script>
+          <!-- Category 2 -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="category-card">
+              <div class="category-image">
+                <img src="img/img21.png" alt="Formal Shoes" class="img-fluid">
+                <div class="category-overlay">
+                  <a href="product.html" class="btn btn-primary category-btn">View Collection</a>
+                </div>
+              </div>
+              <div class="category-info">
+                <h4 class="category-title">Formal Shoes</h4>
+                <p class="category-count">250 product</p>
+              </div>
+            </div>
+          </div>
 
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
-            integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
-            crossorigin="anonymous"></script>
-        <script src="categories.js"></script>
+          <!-- Category 3 -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="category-card">
+              <div class="category-image">
+                <img src="img/img23.png" alt="Sport Shoes" class="img-fluid">
+                <div class="category-overlay">
+                  <a href="product.html" class="btn btn-primary category-btn">View Collection</a>
+                </div>
+              </div>
+              <div class="category-info">
+                <h4 class="category-title">Sport Shoes</h4>
+                <p class="category-count">200 product</p>
+              </div>
+            </div>
+          </div>
 
+          <!-- Category 4 -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="category-card">
+              <div class="category-image">
+                <img src="img/img24.png" alt="Women Shoes" class="img-fluid">
+                <div class="category-overlay">
+                  <a href="product.html" class="btn btn-primary category-btn">View Collection</a>
+                </div>
+              </div>
+              <div class="category-info">
+                <h4 class="category-title">Women Shoes</h4>
+                <p class="category-count">180 product</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 5 -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="category-card">
+              <div class="category-image">
+                <img src="img/img26.png" alt="Kids Shoes" class="img-fluid">
+                <div class="category-overlay">
+                  <a href="product.html" class="btn btn-primary category-btn">View Collection</a>
+                </div>
+              </div>
+              <div class="category-info">
+                <h4 class="category-title">Kids Shoes</h4>
+                <p class="category-count">150 product</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 6 -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="category-card">
+              <div class="category-image">
+                <img src="img/img27.png" alt="Boots" class="img-fluid">
+                <div class="category-overlay">
+                  <a href="product.html" class="btn btn-primary category-btn">View Collection</a>
+                </div>
+              </div>
+              <div class="category-info">
+                <h4 class="category-title">Boots</h4>
+                <p class="category-count">120 product</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="Shop-Now">
+      <div class="banner">
+        <div class="banner-text">
+          <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
+            <path
+              d="M0.55475 13.7329L4.71528 12.5414C6.58887 12.012 8.29557 11.0096 9.67204 9.63019C11.0485 8.25073 12.0487 6.54034 12.5769 4.66269L13.7659 0.493151C13.8257 0.347273 13.9274 0.222502 14.0581 0.134693C14.1888 0.0468833 14.3426 0 14.5 0C14.6574 0 14.8112 0.0468833 14.9419 0.134693C15.0726 0.222502 15.1743 0.347273 15.2341 0.493151L16.4231 4.66269C16.9513 6.54034 17.9515 8.25073 19.328 9.63019C20.7044 11.0096 22.4111 12.012 24.2847 12.5414L28.4452 13.7329C28.605 13.7783 28.7456 13.8748 28.8457 14.0075C28.9458 14.1403 29 14.3022 29 14.4686C29 14.635 28.9458 14.7969 28.8457 14.9297C28.7456 15.0624 28.605 15.1589 28.4452 15.2043L24.2847 16.3958C22.4111 16.9252 20.7044 17.9276 19.328 19.307C17.9515 20.6865 16.9513 22.3969 16.4231 24.2745L15.2341 28.444C15.1888 28.6041 15.0926 28.7451 14.9601 28.8454C14.8276 28.9457 14.6661 29 14.5 29C14.3339 29 14.1724 28.9457 14.0399 28.8454C13.9074 28.7451 13.8112 28.6041 13.7659 28.444L12.5769 24.2745C12.0487 22.3969 11.0485 20.6865 9.67204 19.307C8.29557 17.9276 6.58887 16.9252 4.71528 16.3958L0.55475 15.2043C0.395 15.1589 0.2544 15.0624 0.154284 14.9297C0.0541668 14.7969 0 14.635 0 14.4686C0 14.3022 0.0541668 14.1403 0.154284 14.0075C0.2544 13.8748 0.395 13.7783 0.55475 13.7329Z"
+              fill="#010F1C" />
+          </svg>
+          <h1>Shop Now and Unleash Your<br> Inner Glow! <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29"
+              viewBox="0 0 29 29" fill="none">
+              <path
+                d="M0.55475 13.7329L4.71528 12.5414C6.58887 12.012 8.29557 11.0096 9.67204 9.63019C11.0485 8.25073 12.0487 6.54034 12.5769 4.66269L13.7659 0.493151C13.8257 0.347273 13.9274 0.222502 14.0581 0.134693C14.1888 0.0468833 14.3426 0 14.5 0C14.6574 0 14.8112 0.0468833 14.9419 0.134693C15.0726 0.222502 15.1743 0.347273 15.2341 0.493151L16.4231 4.66269C16.9513 6.54034 17.9515 8.25073 19.328 9.63019C20.7044 11.0096 22.4111 12.012 24.2847 12.5414L28.4452 13.7329C28.605 13.7783 28.7456 13.8748 28.8457 14.0075C28.9458 14.1403 29 14.3022 29 14.4686C29 14.635 28.9458 14.7969 28.8457 14.9297C28.7456 15.0624 28.605 15.1589 28.4452 15.2043L24.2847 16.3958C22.4111 16.9252 20.7044 17.9276 19.328 19.307C17.9515 20.6865 16.9513 22.3969 16.4231 24.2745L15.2341 28.444C15.1888 28.6041 15.0926 28.7451 14.9601 28.8454C14.8276 28.9457 14.6661 29 14.5 29C14.3339 29 14.1724 28.9457 14.0399 28.8454C13.9074 28.7451 13.8112 28.6041 13.7659 28.444L12.5769 24.2745C12.0487 22.3969 11.0485 20.6865 9.67204 19.307C8.29557 17.9276 6.58887 16.9252 4.71528 16.3958L0.55475 15.2043C0.395 15.1589 0.2544 15.0624 0.154284 14.9297C0.0541668 14.7969 0 14.635 0 14.4686C0 14.3022 0.0541668 14.1403 0.154284 14.0075C0.2544 13.8748 0.395 13.7783 0.55475 13.7329Z"
+                fill="#010F1C" />
+            </svg></h1>
+          <button class="shop-button">
+            <a href="./categories.html">
+              Shop Now
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M14.125 5.875L5.875 14.125" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M8.3335 5.8335L14.1252 5.87433L14.1668 11.6668" stroke="white" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+          </button>
+        </div>
+        <div class="banner-image">
+          <img src="img/img15.png" alt="Shoes">
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="footer-cta">
+              <h2 class="footer-title">Are You Interested</h2>
+              <a href="product.html" class="shopping-now-link">Shopping Now</a>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="footer-content">
+              <h3 class="footer-brand">Shoes<span class="luxe-text">luxe</span></h3>
+              <nav class="footer-nav">
+                <ul class="footer-links">
+                  <li><a href="#">Shop</a></li>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Blog</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+              </nav>
+              <div class="footer-social">
+                <a href="#" class="social-link twitter">
+                  <img src="shoes web_icon/twitter.svg" alt="">
+                </a>
+                <a href="#" class="social-link instagram">
+                  <img src="shoes web_icon/instagram.svg" alt="">
+                </a>
+                <a href="#" class="social-link facebook">
+                  <img src="shoes web_icon/facebook.svg" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="main.js"></script>
+    <script src="categories.js"></script>
 </body>
 
 </html>

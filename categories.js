@@ -1,5 +1,5 @@
 // Initialize AOS (Animate On Scroll)
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
     AOS.init({
         duration: 800,
         easing: 'ease-in-out',
@@ -26,9 +26,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 let lastScrollTop = 0;
 const header = document.querySelector('.header-section');
 
-window.addEventListener('scroll', function () {
+window.addEventListener('scroll', function() {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
+    
     if (scrollTop > lastScrollTop && scrollTop > 100) {
         // Scrolling down
         header.style.transform = 'translateY(-100%)';
@@ -36,14 +36,14 @@ window.addEventListener('scroll', function () {
         // Scrolling up
         header.style.transform = 'translateY(0)';
     }
-
+    
     // Add shadow on scroll
     if (scrollTop > 10) {
         header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
     } else {
         header.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.1)';
     }
-
+    
     lastScrollTop = scrollTop;
 });
 
@@ -52,15 +52,15 @@ const searchInput = document.querySelector('.search-input');
 const searchIcon = document.querySelector('.search-icon');
 
 if (searchInput && searchIcon) {
-    searchInput.addEventListener('focus', function () {
+    searchInput.addEventListener('focus', function() {
         searchIcon.style.color = '#C8860D';
     });
-
-    searchInput.addEventListener('blur', function () {
+    
+    searchInput.addEventListener('blur', function() {
         searchIcon.style.color = '#999999';
     });
-
-    searchInput.addEventListener('input', function () {
+    
+    searchInput.addEventListener('input', function() {
         console.log('Searching for:', this.value);
     });
 }
@@ -69,7 +69,7 @@ if (searchInput && searchIcon) {
 const categoryCards = document.querySelectorAll('.category-card');
 
 categoryCards.forEach(card => {
-    card.addEventListener('mouseenter', function () {
+    card.addEventListener('mouseenter', function() {
         categoryCards.forEach(otherCard => {
             if (otherCard !== card) {
                 otherCard.style.opacity = '0.7';
@@ -77,19 +77,19 @@ categoryCards.forEach(card => {
             }
         });
     });
-
-    card.addEventListener('mouseleave', function () {
+    
+    card.addEventListener('mouseleave', function() {
         categoryCards.forEach(otherCard => {
             otherCard.style.opacity = '1';
             otherCard.style.transform = 'scale(1)';
         });
     });
-
+    
     // Redirect to single product page
-    card.addEventListener('click', function () {
+    card.addEventListener('click', function() {
         const categoryTitle = this.querySelector('.category-title').textContent;
         console.log('Clicked category:', categoryTitle);
-        window.location.href = 'single_product.html';
+        window.location.href = 'single-product.html';
     });
 });
 
@@ -98,11 +98,11 @@ const floatingShoes = document.querySelectorAll('.floating-shoe');
 
 floatingShoes.forEach((shoe, index) => {
     shoe.style.animationDelay = `${index * 0.5}s`;
-
-    shoe.addEventListener('click', function () {
+    
+    shoe.addEventListener('click', function() {
         this.style.animation = 'none';
         this.style.transform = 'scale(1.2) rotate(360deg)';
-
+        
         setTimeout(() => {
             this.style.animation = '';
             this.style.transform = '';
@@ -111,13 +111,13 @@ floatingShoes.forEach((shoe, index) => {
 });
 
 // Parallax effect for CTA section
-window.addEventListener('scroll', function () {
+window.addEventListener('scroll', function() {
     const scrolled = window.pageYOffset;
     const ctaSection = document.querySelector('.cta-section');
     if (ctaSection) {
         const ctaOffset = ctaSection.offsetTop;
         const ctaHeight = ctaSection.offsetHeight;
-
+        
         if (scrolled > ctaOffset - window.innerHeight && scrolled < ctaOffset + ctaHeight) {
             const rate = (scrolled - ctaOffset + window.innerHeight) / (ctaHeight + window.innerHeight);
             const yPos = -(rate * 50);
@@ -127,9 +127,9 @@ window.addEventListener('scroll', function () {
 });
 
 // Loading animation
-window.addEventListener('load', function () {
+window.addEventListener('load', function() {
     document.body.classList.add('loaded');
-
+    
     const elementsToAnimate = document.querySelectorAll('.loading');
     elementsToAnimate.forEach((element, index) => {
         setTimeout(() => {
@@ -143,7 +143,7 @@ const navbarToggler = document.querySelector('.navbar-toggler');
 const navbarCollapse = document.querySelector('.navbar-collapse');
 
 if (navbarToggler) {
-    navbarToggler.addEventListener('click', function () {
+    navbarToggler.addEventListener('click', function() {
         navbarCollapse.classList.toggle('show-animated');
     });
 }
@@ -154,7 +154,7 @@ const observerOptions = {
     rootMargin: '0px 0px -50px 0px'
 };
 
-const observer = new IntersectionObserver(function (entries) {
+const observer = new IntersectionObserver(function(entries) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('animate-in');
@@ -168,7 +168,7 @@ categoryCards.forEach((card, index) => {
 });
 
 // Add keyboard navigation
-document.addEventListener('keydown', function (e) {
+document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') {
         const navbarCollapse = document.querySelector('.navbar-collapse.show');
         if (navbarCollapse) {
@@ -190,7 +190,7 @@ function debounce(func, wait) {
     };
 }
 
-const debouncedScrollHandler = debounce(function () {
+const debouncedScrollHandler = debounce(function() {
     // Scroll-based animations here
 }, 10);
 
@@ -200,11 +200,11 @@ window.addEventListener('scroll', debouncedScrollHandler);
 let touchStartX = 0;
 let touchEndX = 0;
 
-document.addEventListener('touchstart', function (e) {
+document.addEventListener('touchstart', function(e) {
     touchStartX = e.changedTouches[0].screenX;
 });
 
-document.addEventListener('touchend', function (e) {
+document.addEventListener('touchend', function(e) {
     touchEndX = e.changedTouches[0].screenX;
     handleSwipe();
 });
@@ -212,7 +212,7 @@ document.addEventListener('touchend', function (e) {
 function handleSwipe() {
     const swipeThreshold = 50;
     const diff = touchStartX - touchEndX;
-
+    
     if (Math.abs(diff) > swipeThreshold) {
         if (diff > 0) {
             console.log('Swiped left');
@@ -227,7 +227,7 @@ const cursor = document.createElement('div');
 cursor.className = 'custom-cursor';
 document.body.appendChild(cursor);
 
-document.addEventListener('mousemove', function (e) {
+document.addEventListener('mousemove', function(e) {
     cursor.style.left = e.clientX + 'px';
     cursor.style.top = e.clientY + 'px';
 });
@@ -238,120 +238,23 @@ function createRipple(event) {
     const circle = document.createElement('span');
     const diameter = Math.max(button.clientWidth, button.clientHeight);
     const radius = diameter / 2;
-
+    
     circle.style.width = circle.style.height = `${diameter}px`;
     circle.style.left = `${event.clientX - button.offsetLeft - radius}px`;
     circle.style.top = `${event.clientY - button.offsetTop - radius}px`;
     circle.classList.add('ripple');
-
+    
     const ripple = button.getElementsByClassName('ripple')[0];
     if (ripple) {
         ripple.remove();
     }
-
+    
     button.appendChild(circle);
 }
 
-document.querySelectorAll('.btn, .cta-btn').forEach(button => {
+document.querySelectorAll('.btn, .category-btn, .cta-btn').forEach(button => {
     button.addEventListener('click', createRipple);
 });
-
-// ===============================
-// Scroll Animation - Matching Product Style
-// ===============================
-const categorySections = document.querySelectorAll(".categories-section");
-categorySections.forEach(el => {
-    el.style.opacity = "0";
-    el.style.transform = "translateY(40px)";
-    el.style.transition = "all 0.6s ease";
-});
-
-function revealOnScroll() {
-    categorySections.forEach((el, i) => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 100) {
-            setTimeout(() => {
-                el.style.opacity = "1";
-                el.style.transform = "translateY(0)";
-            }, i * 100); // Staggered animation
-        }
-    });
-}
-
-window.addEventListener("scroll", revealOnScroll);
-revealOnScroll();
-
-// Enhanced Category Card Hover Effects
-const enhancedCategoryCards = document.querySelectorAll('.category-card');
-
-enhancedCategoryCards.forEach(card => {
-    // Add smooth hover effects
-    card.addEventListener('mouseenter', function () {
-        // Add subtle glow effect
-        this.style.boxShadow = '0 8px 32px rgba(185, 154, 62, 0.3)';
-    });
-
-    card.addEventListener('mouseleave', function () {
-        this.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.2)';
-    });
-});
-
-// Heart Icon Functionality - Matching Product Screen
-const heartIcons = document.querySelectorAll('.product-icons .icon-circle svg');
-const navbarHeart = document.getElementById("navbar-heart");
-const heartCount = document.getElementById("heart-count");
-let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
-
-updateNavbar();
-
-heartIcons.forEach((heart, index) => {
-    heart.addEventListener("click", (e) => {
-        e.stopPropagation(); // Prevent card click
-        const path = heart.querySelector("path");
-
-        // Get category data
-        const categoryCard = heart.closest(".category-card");
-        const category = {
-            id: `category-${index}`,
-            name: categoryCard.querySelector(".category-title").textContent,
-            image: categoryCard.querySelector("img").src
-        };
-
-        // Toggle heart
-        if (path.getAttribute("fill") === "#B9985D") {
-            path.setAttribute("fill", "none");
-            path.setAttribute("stroke", "black");
-            wishlist = wishlist.filter(item => item.id !== category.id);
-        } else {
-            path.setAttribute("fill", "#B9985D");
-            path.setAttribute("stroke", "#B9985D");
-            if (!wishlist.some(item => item.id === category.id)) {
-                wishlist.push(category);
-            }
-        }
-
-        localStorage.setItem("wishlist", JSON.stringify(wishlist));
-        updateNavbar();
-    });
-});
-
-function updateNavbar() {
-    if (heartCount && navbarHeart) {
-        const count = wishlist.length;
-        if (count > 0) {
-            navbarHeart.classList.remove("bi-heart");
-            navbarHeart.classList.add("bi-heart-fill");
-            navbarHeart.style.color = "#B9985D";
-            heartCount.style.display = "inline-block";
-            heartCount.textContent = count;
-        } else {
-            navbarHeart.classList.remove("bi-heart-fill");
-            navbarHeart.classList.add("bi-heart");
-            navbarHeart.style.color = "black";
-            heartCount.style.display = "none";
-        }
-    }
-}
 
 // Console welcome message
 console.log(`
