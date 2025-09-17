@@ -161,3 +161,11 @@ document.querySelectorAll('.btn-cart').forEach(button => {
 
   window.addEventListener("scroll", revealOnScroll);
   revealOnScroll();
+
+
+  document.querySelectorAll('.btn-icon').forEach(button => {
+    button.addEventListener('click', function () {
+      const imageUrl = this.getAttribute('data-image');
+      window.location.href = `single_product.html?image=${encodeURIComponent(imageUrl)}`;
+    });
+  });
