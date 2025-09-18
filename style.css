@@ -2367,37 +2367,36 @@ a {
     }
 }
 
-/* الموبايل */
+/* ========== Mobile & Tablet Responsive ========== */
+
+/* NAVBAR */
 @media (max-width: 768px) {
   .nav_menu {
-    display: none; /* نخفيها افتراضياً */
+    display: none;
     flex-direction: column;
-    gap: 20px;
-    background: white;
+    gap: 15px;
+    background: #fff;
     position: absolute;
-    top: 60px; /* تحت النافبار */
+    top: 60px;
     left: 0;
     width: 100%;
     padding: 15px 0;
     border-top: 1px solid #ddd;
     z-index: 999;
   }
-
   .nav_menu.active {
-    display: flex; /* تظهر لما اضغط على زرار القائمة */
+    display: flex;
   }
-
   .menu-button {
     display: block;
   }
 }
 
-/* الديسكتوب */
+/* DESKTOP ONLY */
 @media (min-width: 769px) {
   .menu-button {
     display: none;
   }
-
   .nav_menu {
     display: flex !important;
     position: static;
@@ -2406,12 +2405,12 @@ a {
   }
 }
 
-@media (max-width: 1200px) {
+/* PRODUCTS GRID */
+@media (max-width: 1024px) {
   .grid-container2 {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
 @media (max-width: 768px) {
   .grid-container2 {
     grid-template-columns: 1fr;
@@ -2419,25 +2418,32 @@ a {
   .product-card {
     max-width: 100%;
   }
+  .product-title {
+    font-size: 18px;
+  }
+  .product-price {
+    font-size: 18px;
+  }
 }
 
+/* BANNER */
 @media (max-width: 768px) {
   .banner {
     flex-direction: column;
     text-align: center;
     padding: 20px;
   }
-
   .banner-text h1 {
-    font-size: 28px;
+    font-size: 26px;
+    line-height: 1.4;
   }
-
   .banner-image {
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 140px;
   }
 }
 
+/* FOOTER BANNER */
 @media (max-width: 768px) {
   .banner-footer ul {
     font-size: 20px;
@@ -2446,19 +2452,22 @@ a {
   }
 }
 
+/* CART PAGE */
 @media (max-width: 768px) {
   .row .col {
     flex-direction: column;
     gap: 20px;
   }
-
   .payment-box, 
   .product-box {
     width: 100% !important;
   }
-
   .product-box img {
     width: 100% !important;
     height: auto !important;
+  }
+  .checkout-steps {
+    width: 100%;
+    font-size: 18px;
   }
 }
