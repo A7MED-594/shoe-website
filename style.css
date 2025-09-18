@@ -2367,137 +2367,98 @@ a {
     }
 }
 
-/* ==================== RESPONSIVE FIXES ==================== */
+/* الموبايل */
+@media (max-width: 768px) {
+  .nav_menu {
+    display: none; /* نخفيها افتراضياً */
+    flex-direction: column;
+    gap: 20px;
+    background: white;
+    position: absolute;
+    top: 60px; /* تحت النافبار */
+    left: 0;
+    width: 100%;
+    padding: 15px 0;
+    border-top: 1px solid #ddd;
+    z-index: 999;
+  }
 
-/* للأجهزة الكبيرة جداً (شاشات فوق 1400px) */
-@media (min-width: 1400px) {
-    .container2 {
-        max-width: 1320px;
-    }
+  .nav_menu.active {
+    display: flex; /* تظهر لما اضغط على زرار القائمة */
+  }
+
+  .menu-button {
+    display: block;
+  }
 }
 
-/* شاشات لابتوب متوسطة (من 1025px لـ 1399px) */
-@media (max-width: 1399px) {
-    .col1, .col3 {
-        margin-left: 60px;
-        margin-right: 60px;
-    }
+/* الديسكتوب */
+@media (min-width: 769px) {
+  .menu-button {
+    display: none;
+  }
+
+  .nav_menu {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    gap: 40px;
+  }
 }
 
-/* تابلت (768px لـ 1024px) */
-@media (max-width: 1024px) {
-    .nav_menu {
-        gap: 20px;
-    }
-
-    .col1, .col3 {
-        margin-left: 30px;
-        margin-right: 30px;
-    }
-
-    .product-title {
-        font-size: 20px;
-    }
-
-    .product-price {
-        font-size: 20px;
-    }
-
-    .banner {
-        flex-direction: column;
-        text-align: center;
-        gap: 30px;
-    }
-
-    .banner-text h1 {
-        font-size: 36px;
-    }
+@media (max-width: 1200px) {
+  .grid-container2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-/* موبايل كبير (من 576px لـ 767px) */
-@media (max-width: 767px) {
-    .nav_menu {
-        flex-direction: column;
-        gap: 15px;
-        align-items: center;
-    }
-
-    .col1, .col3 {
-        margin-left: 15px;
-        margin-right: 15px;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
-
-    .grid-container2 {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .product-title {
-        font-size: 18px;
-    }
-
-    .product-price {
-        font-size: 18px;
-    }
-
-    .banner-text h1 {
-        font-size: 28px;
-    }
-
-    .banner-image {
-        width: 160px;
-        height: 160px;
-    }
-
-    .checkout-steps {
-        width: 100%;
-        font-size: 18px;
-    }
-
-    .payment-box {
-        width: 100%;
-    }
+@media (max-width: 768px) {
+  .grid-container2 {
+    grid-template-columns: 1fr;
+  }
+  .product-card {
+    max-width: 100%;
+  }
 }
 
-/* موبايل صغير جداً (أقل من 575px) */
-@media (max-width: 575px) {
-    .shoe_text, .luxe_text {
-        font-size: 24px;
-    }
+@media (max-width: 768px) {
+  .banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
 
-    .nav_menu .nav-text {
-        font-size: 1rem;
-    }
+  .banner-text h1 {
+    font-size: 28px;
+  }
 
-    .banner {
-        padding: 20px;
-    }
+  .banner-image {
+    width: 150px;
+    height: 150px;
+  }
+}
 
-    .banner-text h1 {
-        font-size: 22px;
-    }
+@media (max-width: 768px) {
+  .banner-footer ul {
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+  }
+}
 
-    .shop-button {
-        width: 100%;
-        justify-content: center;
-    }
+@media (max-width: 768px) {
+  .row .col {
+    flex-direction: column;
+    gap: 20px;
+  }
 
-    .product-title {
-        font-size: 16px;
-    }
+  .payment-box, 
+  .product-box {
+    width: 100% !important;
+  }
 
-    .product-price {
-        font-size: 16px;
-    }
-
-    .Add {
-        font-size: 14px;
-    }
-
-    .checkout-steps {
-        font-size: 16px;
-    }
+  .product-box img {
+    width: 100% !important;
+    height: auto !important;
+  }
 }
