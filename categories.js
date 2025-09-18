@@ -256,6 +256,22 @@ document.querySelectorAll('.btn, .category-btn, .cta-btn').forEach(button => {
     button.addEventListener('click', createRipple);
 });
 
+  const currentPage = window.location.pathname.split("/").pop();
+
+  // Select all nav links
+  const navLinks = document.querySelectorAll(".nav-link");
+
+  navLinks.forEach(link => {
+    // Remove any existing "active"
+    link.classList.remove("active");
+
+    // Compare href with current page
+    const linkPage = link.getAttribute("href");
+    if (linkPage === currentPage) {
+      link.classList.add("active");
+    }
+  });
+
 // Console welcome message
 console.log(`
 🦶 Welcome to ShoeLuxe!
@@ -263,3 +279,4 @@ console.log(`
 ✨ Built with Bootstrap 5 & modern animations
 🚀 Optimized for performance and accessibility
 `);
+
